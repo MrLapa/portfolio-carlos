@@ -36,9 +36,7 @@ export default function RootLayout({
     <html lang="en" data-bs-theme="dark">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Sidebar />
-        <main className="wrapper">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   )
