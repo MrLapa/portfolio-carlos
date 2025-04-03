@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,9 +16,13 @@ export const metadata: Metadata = {
   title: "Carlos Garcia Portfolio",
   description: "Carlos Garcia Portfolio Web Development Projects",
   keywords: "Software Development, FE Development, Web Development",
-  authors: [{ name: "Carlos Garcia" }],
-  viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+  authors: [{ name: "Carlos Garcia" }]
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export default function RootLayout({
   children,
