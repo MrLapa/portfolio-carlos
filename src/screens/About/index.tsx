@@ -1,7 +1,7 @@
 // import Image from 'next/image'
 import React from 'react'
 
-export const About = () => {
+const About = () => {
   return (
     <div className="container">
       <div className="about-me">
@@ -161,3 +161,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default About

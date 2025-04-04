@@ -1,4 +1,4 @@
-import { About } from "../screens/About"
+import About from "../screens/About";
 import ContactUs from "../screens/ContactUs"
 import Portfolio from "../screens/Portfolio"
 import Services from "../screens/Services"
