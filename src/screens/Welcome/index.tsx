@@ -1,4 +1,5 @@
-// import Image from 'next/image'
+import Image from 'next/image'
+
 const Welcome = () => {
   return (
     <>
@@ -13,11 +14,11 @@ const Welcome = () => {
             <div className="row align-items-center min-vh-100 justify-content-center">
               <div className="col-lg-6">
                 <div className="home-image">
-                  {/* <div className="home-image-in">
-                    <Image src="assets/img/home-banner.jpg" alt="home banner" />
-                  </div> */}
+                  <div className="home-image-in">
+                    <Image src="/assets/img/home-banner.jpg" alt="home banner" width={100} height={100} />
+                  </div>
                 </div>
-                <div className="home-intro">
+                <div className="home-intro d-flex align-items-center flex-column">
                   <h1>Tapsi d{"'"}Souza</h1>
                   <h2>I{"'"}m a <span id="type-it" /></h2>
                   <ul className="nav social-link">
