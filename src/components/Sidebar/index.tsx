@@ -24,7 +24,7 @@ const Sidebar = ({ activeLink = "home" }: { activeLink: string }) => {
       <div className={`header-left-fixed one-page-nav ${"menu-open"}`}>
         <ul className="main-menu">
           {menuItems.map((item, index) => (
-            <li key={index} className={activeLink === item.id ? "active" : ""}>
+            <li key={`item-${index}`} className={activeLink === item.id ? "active" : ""}>
               <a data-scroll-nav={index} href={item.href}>
                 <span className="m-icon">
                   <i className={item.iconClass} />

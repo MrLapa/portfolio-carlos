@@ -38,7 +38,7 @@ const PageWrapper = () => {
           const { component: SectionComponent, className } = sections[section];
           return (
             <InView
-              key={index}
+              key={`section-${index}`}
               as="section"
               id={section}
               data-scroll-index={index + 1}
