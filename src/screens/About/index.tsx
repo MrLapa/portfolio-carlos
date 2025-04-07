@@ -128,7 +128,7 @@ const About = ({ isActive, isEnteringFromTop }: {
                 </div>
                 <div className="skills d-flex flex-column">
                   {skills.map((skill, index) => (
-                    <div key={index} className="skill-lt">
+                    <div key={`skill-${index}`} className="skill-lt">
                       <h6 className="dark-color">{skill.name}</h6>
                       <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
                         <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
