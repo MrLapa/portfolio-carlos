@@ -1,5 +1,7 @@
-// import Image from 'next/image'
-const About = () => {
+const About = ({ isActive, isEnteringFromTop }: {
+  isActive: boolean,
+  isEnteringFromTop: boolean
+}) => {
   return (
     <div className="container">
       <div className="about-me">
@@ -117,35 +119,35 @@ const About = () => {
                 <div className="title-01">
                   <span>Skills</span>
                 </div>
-                <div className="skills">
+                <div className="skills d-flex flex-column">
                   <div className="skill-lt" data-value={92}>
                     <h6 className="dark-color">HTML5</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
+                    <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
+                      <div className="skill-bar-in" style={{ width: "92%" }}>
                         <span>92%</span>
                       </div>
                     </div>
                   </div>
                   <div className="skill-lt" data-value={72}>
                     <h6 className="dark-color">WordPress</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
+                    <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
+                      <div className="skill-bar-in" style={{ width: "75%" }}>
                         <span>75%</span>
                       </div>
                     </div>
                   </div>
                   <div className="skill-lt" data-value={86}>
                     <h6 className="dark-color">Magento</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
+                    <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
+                      <div className="skill-bar-in" style={{ width: "86%" }}>
                         <span>86%</span>
                       </div>
                     </div>
                   </div>
                   <div className="skill-lt" data-value={88}>
                     <h6 className="dark-color">UI/UX</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
+                    <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
+                      <div className="skill-bar-in" style={{ width: "88%" }}>
                         <span>88%</span>
                       </div>
                     </div>
