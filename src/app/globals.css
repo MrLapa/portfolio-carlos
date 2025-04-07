@@ -1205,17 +1205,20 @@ a {
   margin-top: 20px;
 }
 
-.skill-lt + .skill-lt {
-  padding-top: 30px;
+.skills {
+  gap: 30px;
 }
+
 .skill-lt .skill-bar {
   background-color: var(--px-gray-4);
 }
+
 .skill-lt h6 {
   font-size: 16px;
   margin: 0 0 10px;
 }
-.skill-lt .skill-bar-in {
+
+.skill-bar-in {
   transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) all 0.9s;
   height: 5px;
   position: relative;
@@ -1223,14 +1226,43 @@ a {
   min-width: 100px;
   background-color: var(--bs-heading-color);
 }
-.skill-lt .skill-bar-in [data-bs-theme="dark"] {
-  background-color: var(--px-theme);
-}
+
 .skill-lt .skill-bar-in span {
   position: absolute;
   right: 0;
   top: -30px;
   font-size: 14px;
+}
+
+.skill-lt .skill-bar.open {
+  -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Safari 4+ */
+  -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Fx 5+ */
+  animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* IE 10+ */
+  width: 100%;
+}
+@-webkit-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* Services

@@ -1,5 +1,14 @@
-// import Image from 'next/image'
-const About = () => {
+const skills = [
+  { name: "HTML5", value: 92 },
+  { name: "WordPress", value: 75 },
+  { name: "Magento", value: 86 },
+  { name: "UI/UX", value: 88 },
+]
+
+const About = ({ isActive, isEnteringFromTop }: {
+  isActive: boolean,
+  isEnteringFromTop: boolean
+}) => {
   return (
     <div className="container">
       <div className="about-me">
@@ -117,39 +126,17 @@ const About = () => {
                 <div className="title-01">
                   <span>Skills</span>
                 </div>
-                <div className="skills">
-                  <div className="skill-lt" data-value={92}>
-                    <h6 className="dark-color">HTML5</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
-                        <span>92%</span>
+                <div className="skills d-flex flex-column">
+                  {skills.map((skill, index) => (
+                    <div key={index} className="skill-lt">
+                      <h6 className="dark-color">{skill.name}</h6>
+                      <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
+                        <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
+                          <span>{skill.value}%</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="skill-lt" data-value={72}>
-                    <h6 className="dark-color">WordPress</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
-                        <span>75%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="skill-lt" data-value={86}>
-                    <h6 className="dark-color">Magento</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
-                        <span>86%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="skill-lt" data-value={88}>
-                    <h6 className="dark-color">UI/UX</h6>
-                    <div className="skill-bar">
-                      <div className="skill-bar-in">
-                        <span>88%</span>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
