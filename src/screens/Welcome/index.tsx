@@ -23,16 +23,10 @@ const Welcome = () => {
                   <h2>Software Engineer</h2>
                   <ul className="nav social-link">
                     <li>
-                      <a href="#"><i className="fab fa-twitter" /></a>
+                      <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'><i className="bi bi-linkedin"></i></a>
                     </li>
                     <li>
-                      <a href="#"><i className="fab fa-instagram" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><i className="fab fa-facebook" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><i className="fab fa-pinterest" /></a>
+                      <a href="https://github.com/MrLapa" target='_blank'><i className="bi bi-github"></i></a>
                     </li>
                   </ul>
                 </div>
