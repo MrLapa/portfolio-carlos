@@ -1,8 +1,13 @@
 const skills = [
-  { name: "HTML5", value: 92 },
-  { name: "WordPress", value: 75 },
-  { name: "Magento", value: 86 },
-  { name: "UI/UX", value: 88 },
+  { name: "React", value: 100 },
+  { name: "TypeScript", value: 90 },
+  { name: "Next.js", value: 90 },
+  { name: "TanStack Query", value: 80 },
+  { name: "Apollo Client (GraphQL)", value: 80 },
+  { name: "Material UI", value: 90 },
+  { name: "Tailwind CSS", value: 90 },
+  { name: "Unit tests (Jest, React Testing Library)", value: 90 },
+  { name: "Version Control (Git, GitHub)", value: 90 },
 ]
 
 const About = ({ isActive, isEnteringFromTop }: {
@@ -18,9 +23,8 @@ const About = ({ isActive, isEnteringFromTop }: {
               <span>About Me</span>
             </div>
             <div className="about-me-text pb-5">
-              <h3>My Name Is Tapsi d{"'"}Souza</h3>
-              <h5><span>I Am Available</span> For UI UX Design Projects</h5>
-              <p>Born in 2000, AB type living in USA. We provide on-screen design for websites and apps, as well as front-end implementation. We will continue to pursue a wide range of expressions and better code by pursuing our “likes”.</p>
+              <p>I&apos;m a Software Engineer with 8 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, strive to write clean, maintainable code, and focus on creating smooth, user-friendly experiences.
+                Driven by curiosity and a strong commitment to best practices, I bring a proactive approach to problem-solving and continuous improvement.</p>
               <div className="row pt-2">
                 <div className="col-auto">
                   <div className="a-count">
@@ -46,25 +50,35 @@ const About = ({ isActive, isEnteringFromTop }: {
                   <div className="icon">
                     <i className="fas fa-briefcase" />
                   </div>
-                  <span className="time">2019 - Present</span>
-                  <h5>Art Director - Facebook Inc</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span className="time">2023 - Present</span>
+                  <h5>Software Engineer – Wizeline SAS (Colombia)</h5>
+                  <p>Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.</p>
                 </li>
                 <li>
                   <div className="icon">
                     <i className="fas fa-briefcase" />
                   </div>
-                  <span className="time">2019 - Present</span>
-                  <h5>Art Director - Facebook Inc</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span className="time">2024 - 2025</span>
+                  <h5>Frontend Developer – Miami Yachting (Freelance)</h5>
+                  <p>
+                    Developed a yacht marketplace with Gatsby, Axios, and Styled Components. Implemented dynamic filters, responsive UI, and fast-loading pages for a seamless search experience.
+                  </p>
                 </li>
                 <li>
                   <div className="icon">
                     <i className="fas fa-briefcase" />
                   </div>
-                  <span className="time">2019 - Present</span>
-                  <h5>Art Director - Facebook Inc</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span className="time">2021 - 2022</span>
+                  <h5>Frontend Developer – BoatyardX SAS (Colombia)</h5>
+                  <p>Building responsive financial apps with Next.js and TypeScript. Created reusable components with Storybook and integrated GraphQL APIs. Ensured quality with Jest and Cypress tests.</p>
+                </li>
+                <li>
+                  <div className="icon">
+                    <i className="fas fa-briefcase" />
+                  </div>
+                  <span className="time">2019 - 2020</span>
+                  <h5>Software Developer – Falabella (Colombia)</h5>
+                  <p>Developing ASP.NET MVC and React apps. Built Web APIs and handled Oracle DBs for enterprise-grade solutions.</p>
                 </li>
               </ul>
             </div>
@@ -81,34 +95,10 @@ const About = ({ isActive, isEnteringFromTop }: {
                   <ul>
                     <li>
                       <div className="a-icon">
-                        <i className="fab fa-skype" />
-                      </div>
-                      <div className="a-text">
-                        <a className="text-reset stretched-link" href="#">Skype me</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="a-icon">
                         <i className="fa fa-envelope" />
                       </div>
                       <div className="a-text">
                         <a className="text-reset stretched-link" href="#">Mail Me</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="a-icon">
-                        <i className="fab fa-whatsapp" />
-                      </div>
-                      <div className="a-text">
-                        <a className="text-reset stretched-link" href="#">WhatsApp Me</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="a-icon">
-                        <i className="fa fa-map" />
-                      </div>
-                      <div className="a-text">
-                        <a className="text-reset stretched-link" href="#">Meet Me</a>
                       </div>
                     </li>
                     <li>
