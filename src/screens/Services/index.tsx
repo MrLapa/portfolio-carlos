@@ -41,7 +41,7 @@ const Services = () => {
       </div>
       <div className="row gy-4">
         {services.map((service, index) => (
-          <div key={`service-${index}`} className="col-sm-6 col-lg-4">
+          <div key={`service-${index}`} className="col-sm-6 col-lg-4 d-flex">
             <div className="feature-box-01">
               <div className="icon"><i className={`bi ${service.icon}`} /></div>
               <div className="feature-content">
