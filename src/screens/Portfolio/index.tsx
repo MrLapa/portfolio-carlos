@@ -38,13 +38,6 @@ const Portfolio = () => {
                   <div className="portfolio-text">
                     <h6>{data.title}</h6>
                     <p>{data.subTitle}</p>
-                    {/* <a
-                      onClick={() => openLightboxOnSlide(index)}
-                      className="gallery-link"
-                      href="#project_1"
-                    >
-                      <i className="bi-arrow-up-right-circle" />
-                    </a> */}
                   </div>
                   <div className="portfolio-img">
                     <div style={{ maxHeight: "318px", overflow: "hidden" }}>
