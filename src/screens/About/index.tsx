@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const skills = [
   { name: "React", value: 100 },
   { name: "TypeScript", value: 90 },
@@ -86,24 +88,28 @@ const About = ({ isActive, isEnteringFromTop }: {
           <div className="col-lg-7 sticky-lg-top ps-xl-5">
             <div className="row align-items-start">
               <div className="col-md-7 py-4">
-                {/* <div className="about-me-img">
-                  <Image src="assets/img/about-banner.jpg" alt="title" className="img-fluid" />
-                </div> */}
+                <div className="about-me-img">
+                  <Image src="/assets/img/welcome-avatar.jpg" alt="title" className="img-fluid" width="400" height="400" />
+                </div>
               </div>
               <div className="col-md-5 py-4">
                 <div className="about-content">
                   <ul>
                     <li>
                       <div className="a-icon">
-                        <i className="fa fa-envelope" />
+                        <i className="bi bi-envelope-at-fill" />
                       </div>
                       <div className="a-text">
-                        <a className="text-reset stretched-link" href="#">Mail Me</a>
+                        <a
+                          className="text-reset stretched-link"
+                          href="mailto:your-email@example.com?subject=Hello&body=I would like to get in touch with you.">
+                          Mail Me
+                        </a>
                       </div>
                     </li>
                     <li>
                       <div className="a-icon">
-                        <i className="fa-solid fa-file-pdf" />
+                        <i className="bi bi-file-earmark-person-fill" />
                       </div>
                       <div className="a-text">
                         <a className="text-reset stretched-link" href="#">Resume</a>

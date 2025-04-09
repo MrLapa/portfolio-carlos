@@ -15,7 +15,16 @@ const Welcome = () => {
               <div className="col-lg-6">
                 <div className="home-image">
                   <div className="home-image-in">
-                    <Image src="/assets/img/home-banner.jpg" alt="home banner" width={100} height={100} />
+                    <Image
+                      src="/assets/img/welcome-avatar.jpg"
+                      alt="welcome image"
+                      width={500}
+                      height={500}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
+                    />
                   </div>
                 </div>
                 <div className="home-intro d-flex align-items-center flex-column">
@@ -23,10 +32,10 @@ const Welcome = () => {
                   <h2>Software Engineer</h2>
                   <ul className="nav social-link">
                     <li>
-                      <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'><i className="bi bi-linkedin"></i></a>
+                      <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'><i className="bi bi-linkedin" /></a>
                     </li>
                     <li>
-                      <a href="https://github.com/MrLapa" target='_blank'><i className="bi bi-github"></i></a>
+                      <a href="https://github.com/MrLapa" target='_blank'><i className="bi bi-github" /></a>
                     </li>
                   </ul>
                 </div>
