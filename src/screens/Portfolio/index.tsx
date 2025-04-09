@@ -3,6 +3,12 @@ import Modal from "react-modal";
 import { projects } from "./data";
 import { Project } from "./types";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -69,6 +75,7 @@ const Portfolio = () => {
             <Modal
               isOpen={isModalOpen}
               onRequestClose={() => toggleModalOne()}
+              ariaHideApp={false}
             >
               <div id="full_description" className="px-modal">
                 <div className="single-project-box">
@@ -83,20 +90,27 @@ const Portfolio = () => {
                     </button>
                     <div className="col-lg-7">
                       <div className="row g-2">
-                        {modalContent.galleryImages.map((image, index) => (
-                          <div key={index} className="col-12 col-xl-6">
-                            <Image
-                              src={image}
-                              alt="welcome image"
-                              width={500}
-                              height={500}
-                              style={{
-                                width: "100%",
-                                height: "auto",
-                              }}
-                            />
-                          </div>
-                        ))}
+                        <Swiper
+                          spaceBetween={10}
+                          slidesPerView={1}
+                          modules={[Navigation]}
+                          navigation
+                        >
+                          {modalContent.galleryImages.map((image, index) => (
+                            <SwiperSlide key={index}>
+                              <Image
+                                src={image}
+                                alt="welcome image"
+                                width={1000}
+                                height={1000}
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                }}
+                              />
+                            </SwiperSlide>
+                          ))}
+                        </Swiper>
                       </div>
                     </div>
                     <div className="col-lg-5 pt-4 pt-lg-0">
@@ -108,7 +122,7 @@ const Portfolio = () => {
                             <span className="col-12 col-xxl-3">Type:</span>
                             <span className="col-12 col-xxl-9">{modalContent.type}</span>
                           </li>
-                          <li className="d-flex flex-wrap">
+                          <li className="d-flex flex-wrap align-items-start">
                             <span className="col-12 col-xxl-3">Languages:</span>
                             <span className="col-12 col-xxl-9">{modalContent.languages}</span>
                           </li>
