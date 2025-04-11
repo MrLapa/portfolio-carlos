@@ -1,3 +1,5 @@
+import ContactForm from "@/src/components/ContactForm"
+
 const ContactUs = () => {
   return (
     <div className="container">
@@ -31,7 +33,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="col-lg-7 ps-xl-5">
-          {/* <ContactForm /> */}
+          <ContactForm />
         </div>
       </div>
     </div>
