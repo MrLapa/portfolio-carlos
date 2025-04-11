@@ -57,7 +57,7 @@ const Portfolio = () => {
                       className="px_modal portfolio-modal-link"
                       href="#project_1"
                     >
-                      <i className="bi bi-plus-circle-fill" />
+                      <i className="bi bi-zoom-in" />
                     </a>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Portfolio = () => {
                             <span className="col-12 col-xxl-9">{modalContent.type}</span>
                           </li>
                           <li className="d-flex flex-wrap align-items-start">
-                            <span className="col-12 col-xxl-3">Languages:</span>
+                            <span className="col-12 col-xxl-3">Stack:</span>
                             <span className="col-12 col-xxl-9">{modalContent.languages}</span>
                           </li>
                           <li className="d-flex flex-wrap">
