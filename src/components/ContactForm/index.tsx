@@ -1,4 +1,18 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { FieldValues, useForm } from 'react-hook-form';
+import * as yup from "yup"
+
+const validationSchema = yup
+  .object({
+    name: yup.string().required("Name is required"),
+    email: yup
+      .string()
+      .email("Email is not valid")
+      .required("Email is required"),
+    subject: yup.string().required("Subject is required"),
+    msg: yup.string().nullable(),
+  })
+  .required()
 
 const ContactForm = () => {
   const {
@@ -6,7 +20,10 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+
+  });
 
   const onSubmit = (data: FieldValues) => {
     console.log("Form Submitted:", data);
