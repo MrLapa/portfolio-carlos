@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { FieldValues, useForm } from 'react-hook-form';
 import * as yup from "yup"
+import Input from '../Input';
 
 const validationSchema = yup
   .object({
@@ -21,25 +22,23 @@ const ContactForm = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
   } = useForm({
-    resolver: yupResolver(validationSchema),
-
+    resolver: yupResolver(validationSchema)
   });
 
-  const onSubmit = (data: FieldValues) => {
+  const onSubmit = async (data: FieldValues) => {
     console.log("Form Submitted:", data);
-    setTimeout(() => {
-      reset();
-    }, 2000);
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+    reset();
   };
 
   return (
     <div className="contact-form">
       <div className="contact-head">
         <h4>Got Ideas? We{"'"}ve got the skills. Let{"'"}s team up.</h4>
-        <p>Tell us more about yourself and what you{"'"}re got in mind.</p>
+        <p>Tell us more about yourself and what you{"'"}ve got in mind.</p>
       </div>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-        {isSubmitSuccessful &&
+        {isSubmitSuccessful && (
           <div
             className="returnmessage"
             data-success="Your message has been received, we will contact you soon."
@@ -49,71 +48,63 @@ const ContactForm = () => {
               Your message has been received, we will contact you soon.
             </span>
           </div>
-        }
-        {Object.keys(errors).length > 0 && (
-          <div className="empty_notice" style={{ display: "block" }}>
-            <span>Please Fill Required Fields!</span>
-          </div>
         )}
         <div className="row gx-3 gy-4">
           <div className="col-md-6">
             <div className="form-group">
-              <label className="form-label">First name</label>
-              <input
-                {...register("name")}
-                name="name"
+              <Input
+                register={register}
                 id="name"
-                type="text"
+                label="First name"
                 placeholder="Name *"
-                className="form-control"
+                error={errors.name}
               />
             </div>
           </div>
           <div className="col-md-6">
             <div className="form-group">
-              <label className="form-label">Your Email</label>
-              <input
-                {...register("email")}
-                name="email"
+              <Input
+                register={register}
                 id="email"
-                type="text"
+                label="Your email"
                 placeholder="E-mail *"
-                className="form-control"
+                error={errors.email}
               />
             </div>
           </div>
           <div className="col-12">
             <div className="form-group">
-              <label className="form-label">Subject</label>
-              <input
-                {...register("subject")}
-                name="subject"
+              <Input
+                register={register}
                 id="subject"
-                type="text"
+                label="Subject"
                 placeholder="Subject *"
-                className="form-control"
+                error={errors.subject}
               />
             </div>
           </div>
           <div className="col-md-12">
             <div className="form-group">
-              <label className="form-label">Your message</label>
+              <label htmlFor='message' className="form-label">Your message</label>
               <textarea
                 {...register("msg")}
                 name="msg"
                 id="message"
                 placeholder="Message"
-                className="form-control"
+                className={`form-control ${errors.msg ? "is-invalid" : ""}`}
               />
+              {errors.msg && (
+                <span className="text-danger">{errors.msg.message}</span>
+              )}
             </div>
           </div>
           <div className="col-md-12">
             <div className="send">
               <button
-                className="px-btn w-100"
-                type="submit"
                 id="send_message"
+                type="submit"
                 disabled={isSubmitting}
+                className={`px-btn w-100 ${isSubmitting ? "disabled" : ""}`}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
