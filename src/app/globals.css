@@ -23,6 +23,10 @@
   --px-bg: #fff;
   --px-text: #444746;
 
+  --px-disabled-bg: #ccc;
+  --px-disabled-text: #666;
+  --px-disabled-border: #ccc;
+
   --px-gray-1: #f8fafd;
   --px-gray-2: #f3f6fc;
   --px-gray-3: #eff3fa;
@@ -39,6 +43,10 @@
 
   --px-bg: #1f1f1f;
   --px-text: #c4c7c5;
+
+  --px-disabled-bg: #444; /* Dark theme disabled background */
+  --px-disabled-text: #888; /* Dark theme disabled text */
+  --px-disabled-border: #444; /* Dark theme disabled border */
 
   --px-gray-1: #28292a;
   --px-gray-2: #2d2f31;
@@ -389,6 +397,15 @@
 .px-btn:hover {
   background-color: var(--px-theme-text);
   color: var(--px-theme);
+}
+
+.px-btn:disabled,
+.px-btn.disabled {
+  background-color: var(--px-disabled-bg);
+  color: var(--px-disabled-text);
+  border-color: var(--px-disabled-border);
+  pointer-events: none;
+  opacity: 0.65;
 }
 
 .gray-bg-1 {
