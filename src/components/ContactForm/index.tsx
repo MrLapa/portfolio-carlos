@@ -34,8 +34,8 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <div className="contact-head">
-        <h4>Got Ideas? We{"'"}ve got the skills. Let{"'"}s team up.</h4>
-        <p>Tell us more about yourself and what you{"'"}ve got in mind.</p>
+        <h4>Got Ideas? I&apos;ve got the skills. Let&apos;s team up!</h4>
+        <p>Share your vision, and I&apos;ll help bring it to life.</p>
       </div>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
         {isSubmitSuccessful && (
