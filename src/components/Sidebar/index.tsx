@@ -32,6 +32,15 @@ const Sidebar = () => {
         </div>
       </header>
       <div className={`header-left-fixed one-page-nav ${openMenu ? "menu-open" : ""}`}>
+        <div className="d-flex d-lg-none justify-content-center px-3 pt-3">
+          <button
+            className="btn btn-link text-white fs-4 p-0"
+            onClick={() => setOpenMenu(false)}
+            aria-label="Close menu"
+          >
+            <i className="bi bi-x" />
+          </button>
+        </div>
         <ul className="main-menu">
           {menuItems.map((item, index) => (
             <li key={`item-${index}`} className={activeLink === item.id ? "active" : ""}>
