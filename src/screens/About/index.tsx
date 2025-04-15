@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { InView } from "react-intersection-observer"
 
 const skills = [
   { name: "React", value: 100 },
@@ -12,10 +13,7 @@ const skills = [
   { name: "Version Control (Git, GitHub)", value: 90 },
 ]
 
-const About = ({ isActive, isEnteringFromTop }: {
-  isActive: boolean,
-  isEnteringFromTop: boolean
-}) => {
+const About = () => {
   return (
     <div className="container">
       <div className="about-me">
@@ -122,18 +120,22 @@ const About = ({ isActive, isEnteringFromTop }: {
                 <div className="title-01">
                   <span>Skills</span>
                 </div>
-                <div className="skills d-flex flex-column">
-                  {skills.map((skill, index) => (
-                    <div key={`skill-${index}`} className="skill-lt">
-                      <h6 className="dark-color">{skill.name}</h6>
-                      <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
-                        <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
-                          <span>{skill.value}%</span>
+                <InView triggerOnce>
+                  {({ inView, ref }) => (
+                    <div className="skills d-flex flex-column" ref={ref}>
+                      {skills.map((skill, index) => (
+                        <div key={`skill-${index}`} className="skill-lt">
+                          <h6 className="dark-color">{skill.name}</h6>
+                          <div className={`skill-bar ${inView ? 'open' : ''}`}>
+                            <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
+                              <span>{skill.value}%</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  )}
+                </InView>
               </div>
             </div>
           </div>
