@@ -249,6 +249,7 @@
   min-width: inherit;
 }
 
+/* check this styles "header-top-fixed" because possibly is not used */
 .header-top-fixed {
   position: fixed;
   top: 0;
@@ -371,6 +372,7 @@
   color: var(--px-theme);
 }
 .footer .copyright {
+  padding-bottom: 16px;
   font-size: 12px;
   margin: 0 0 40px;
   text-align: center;
