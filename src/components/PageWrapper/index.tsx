@@ -8,6 +8,7 @@ import Portfolio from "@/src/screens/Portfolio";
 import ContactUs from "@/src/screens/ContactUs";
 import { useRef, useState } from "react";
 import Welcome from "@/src/screens/Welcome";
+import Footer from "../Footer";
 
 const PageWrapper = () => {
   const [activeSection, setActiveSection] = useState({
@@ -27,7 +28,7 @@ const PageWrapper = () => {
     },
     services: { component: Services },
     portfolio: { component: Portfolio, className: "gray-bg-1" },
-    contactus: { component: ContactUs },
+    contactus: { component: ContactUs }
   };
 
   return (
@@ -41,7 +42,6 @@ const PageWrapper = () => {
               key={`section-${index}`}
               as="section"
               id={section}
-              data-scroll-index={index + 1}
               className={`section ${section}-section ${className || ""}`}
               threshold={0.5}
               onChange={(inView, entry) => {
@@ -62,6 +62,7 @@ const PageWrapper = () => {
           );
         })}
       </main >
+      <Footer />
     </>
   )
 }
