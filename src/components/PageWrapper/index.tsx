@@ -8,6 +8,7 @@ import ContactUs from "@/src/screens/ContactUs";
 import Welcome from "@/src/screens/Welcome";
 import Footer from "../Footer";
 import { Element } from "react-scroll";
+import { useState } from "react";
 
 type Sections = {
   [key: string]: {
@@ -17,6 +18,7 @@ type Sections = {
 }
 
 const PageWrapper = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const sections: Sections = {
     home: { component: Welcome },
     about: {
@@ -30,8 +32,8 @@ const PageWrapper = () => {
 
   return (
     <>
-      <Sidebar />
-      <main className="wrapper">
+      <Sidebar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <main className="wrapper" onClick={() => setIsMenuOpen(false)}>
         {Object.keys(sections).map((section, index) => {
           const { component: SectionComponent, className } = sections[section];
 

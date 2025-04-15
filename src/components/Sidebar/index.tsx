@@ -12,8 +12,12 @@ const menuItems = [
   { id: "contactus", href: "#contactus", iconClass: "bi-telephone", text: "Contact" },
 ];
 
-const Sidebar = () => {
-  const [openMenu, setOpenMenu] = useState(false)
+type SidebarProps = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+}
+
+const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
   const [activeLink, setActiveLink] = useState("home")
   const isMobile = useIsMobile();
 
@@ -24,18 +28,18 @@ const Sidebar = () => {
           <div className="ms-auto">
             <button
               className="toggler-menu"
-              onClick={() => setOpenMenu(!openMenu)}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span />
             </button>
           </div>
         </div>
       </header>
-      <div className={`header-left-fixed one-page-nav ${openMenu ? "menu-open" : ""}`}>
+      <div className={`header-left-fixed one-page-nav ${isMenuOpen ? "menu-open" : ""}`}>
         <div className="d-flex d-lg-none justify-content-center px-3 pt-3">
           <button
             className="btn btn-link text-white fs-4 p-0"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >
             <i className="bi bi-x" />
