@@ -108,7 +108,7 @@ const About = () => {
                         <i className="bi bi-file-earmark-person-fill" />
                       </div>
                       <div className="a-text">
-                        <a className="text-reset stretched-link" href="#">Resume</a>
+                        <a className="text-reset stretched-link" href="/docs/carlos-garcia-frontend-resume-2025.pdf" target="_blank">Resume</a>
                       </div>
                     </li>
                   </ul>
