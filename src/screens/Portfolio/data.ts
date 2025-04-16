@@ -20,7 +20,8 @@ export const projects = [
     title: "Miami Yachting – Services & Experiences",
     subTitle:
       "Full-service marine platform offering yacht management, charters, and personalized boating experiences.",
-    thumbnail: "/assets/img/miami-yachting-sales/miami-yachting-services-2.png",
+    thumbnail:
+      "/assets/img/miami-yachting-services/miami-yachting-services-1.png",
     galleryImages: [
       "/assets/img/miami-yachting-services/miami-yachting-services-1.png",
       "/assets/img/miami-yachting-services/miami-yachting-services-2.png",
