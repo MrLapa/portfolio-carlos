@@ -1,21 +1,55 @@
 import Image from "next/image"
+import { InView } from "react-intersection-observer"
 
 const skills = [
-  { name: "React", value: 100 },
-  { name: "TypeScript", value: 90 },
-  { name: "Next.js", value: 90 },
-  { name: "TanStack Query", value: 80 },
-  { name: "Apollo Client (GraphQL)", value: 80 },
-  { name: "Material UI", value: 90 },
-  { name: "Tailwind CSS", value: 90 },
-  { name: "Unit tests (Jest, React Testing Library)", value: 90 },
-  { name: "Version Control (Git, GitHub)", value: 90 },
+  { name: "React", value: 100, icon: "/assets/img/stack-icons/react.svg" },
+  { name: "TypeScript", value: 90, icon: "/assets/img/stack-icons/ts.svg" },
+  { name: "Next.js", value: 90, icon: "/assets/img/stack-icons/nextjs.svg" },
+  { name: "TanStack Query", value: 80, icon: "/assets/img/stack-icons/tanstack.png" },
+  { name: "Apollo Client (GraphQL)", value: 80, icon: "/assets/img/stack-icons/graphql.svg" },
+  { name: "Material UI", value: 90, icon: "/assets/img/stack-icons/mui.svg" },
+  { name: "Tailwind CSS", value: 90, icon: "/assets/img/stack-icons/tailwindcss.svg" },
+  { name: "Jest, React Testing Library", value: 90, icon: "/assets/img/stack-icons/jest.png" },
+  { name: "Version Control (Git, GitHub)", value: 90, icon: "/assets/img/stack-icons/github.svg" },
+  { name: "AI Tools (Copilot, Chat GPT)", value: 90, icon: "/assets/img/stack-icons/copilot.png" },
 ]
 
-const About = ({ isActive, isEnteringFromTop }: {
-  isActive: boolean,
-  isEnteringFromTop: boolean
-}) => {
+const experiences = [
+  {
+    company: "Wizeline SAS",
+    position: "Software Engineer",
+    startDate: "2023",
+    endDate: "Present",
+    description: "Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.",
+    location: "Colombia"
+  },
+  {
+    company: "Miami Yachting",
+    position: "Frontend Developer",
+    startDate: "2024",
+    endDate: "2025",
+    description: "Developing a yacht marketplace with Gatsby, Axios, and Styled Components. Implemented dynamic filters, responsive UI, and fast-loading pages for a seamless search experience.",
+    location: "Miami, FL"
+  },
+  {
+    company: "BoatyardX SAS",
+    position: "Frontend Developer",
+    startDate: "2021",
+    endDate: "2022",
+    description: "Building responsive financial apps with Next.js and TypeScript. Created reusable components with Storybook and integrated GraphQL APIs. Ensured quality with Jest and Cypress tests.",
+    location: "Colombia"
+  },
+  {
+    company: "Falabella",
+    position: "Software Developer",
+    startDate: "2019",
+    endDate: "2020",
+    description: "Developing ASP.NET MVC and React apps. Built Web APIs and handled Oracle DBs for enterprise-grade solutions.",
+    location: "Colombia"
+  }
+]
+
+const About = () => {
   return (
     <div className="container">
       <div className="about-me">
@@ -25,22 +59,9 @@ const About = ({ isActive, isEnteringFromTop }: {
               <span>About Me</span>
             </div>
             <div className="about-me-text pb-5">
-              <p>I&apos;m a Software Engineer with 8 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, strive to write clean, maintainable code, and focus on creating smooth, user-friendly experiences.
-                Driven by curiosity and a strong commitment to best practices, I bring a proactive approach to problem-solving and continuous improvement.</p>
-              <div className="row pt-2">
-                <div className="col-auto">
-                  <div className="a-count">
-                    <span className="count">5k</span>
-                    <div className="a-count-text">Projects <br />Completed.</div>
-                  </div>
-                </div>
-                <div className="col-auto">
-                  <div className="a-count">
-                    <span className="count">3k</span>
-                    <div className="a-count-text">Satisfied <br />Clients.</div>
-                  </div>
-                </div>
-              </div>
+              <p>
+                I&apos;m a Software Engineer with 9 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, write clean, maintainable code, and focus on crafting smooth, user-friendly experiences. I also leverage AI tools like ChatGPT and GitHub Copilot to boost productivity and explore creative solutions.
+              </p>
             </div>
             <hr />
             <div className="title-01 mt-5">
@@ -48,40 +69,15 @@ const About = ({ isActive, isEnteringFromTop }: {
             </div>
             <div className="resume-box">
               <ul>
-                <li>
-                  <div className="icon">
-                    <i className="fas fa-briefcase" />
-                  </div>
-                  <span className="time">2023 - Present</span>
-                  <h5>Software Engineer – Wizeline SAS (Colombia)</h5>
-                  <p>Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.</p>
-                </li>
-                <li>
-                  <div className="icon">
-                    <i className="fas fa-briefcase" />
-                  </div>
-                  <span className="time">2024 - 2025</span>
-                  <h5>Frontend Developer – Miami Yachting (Freelance)</h5>
-                  <p>
-                    Developed a yacht marketplace with Gatsby, Axios, and Styled Components. Implemented dynamic filters, responsive UI, and fast-loading pages for a seamless search experience.
-                  </p>
-                </li>
-                <li>
-                  <div className="icon">
-                    <i className="fas fa-briefcase" />
-                  </div>
-                  <span className="time">2021 - 2022</span>
-                  <h5>Frontend Developer – BoatyardX SAS (Colombia)</h5>
-                  <p>Building responsive financial apps with Next.js and TypeScript. Created reusable components with Storybook and integrated GraphQL APIs. Ensured quality with Jest and Cypress tests.</p>
-                </li>
-                <li>
-                  <div className="icon">
-                    <i className="fas fa-briefcase" />
-                  </div>
-                  <span className="time">2019 - 2020</span>
-                  <h5>Software Developer – Falabella (Colombia)</h5>
-                  <p>Developing ASP.NET MVC and React apps. Built Web APIs and handled Oracle DBs for enterprise-grade solutions.</p>
-                </li>
+                {experiences.map((experience, index) => (
+                  <li key={`experience-${index}`}>
+                    <div className="icon">
+                      <i className="bi bi-briefcase-fill" />
+                    </div>
+                    <span className="time">{experience.startDate} - {experience.endDate}</span>
+                    <h5>{experience.position} – {experience.company} ({experience.location})</h5>
+                    <p>{experience.description}</p>
+                  </li>))}
               </ul>
             </div>
           </div>
@@ -122,18 +118,25 @@ const About = ({ isActive, isEnteringFromTop }: {
                 <div className="title-01">
                   <span>Skills</span>
                 </div>
-                <div className="skills d-flex flex-column">
-                  {skills.map((skill, index) => (
-                    <div key={`skill-${index}`} className="skill-lt">
-                      <h6 className="dark-color">{skill.name}</h6>
-                      <div className={`skill-bar ${isActive && isEnteringFromTop ? "open" : ""}`}>
-                        <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
-                          <span>{skill.value}%</span>
+                <InView triggerOnce>
+                  {({ inView, ref }) => (
+                    <div className="skills d-flex flex-column" ref={ref}>
+                      {skills.map((skill, index) => (
+                        <div key={`skill-${index}`} className="d-flex flex-column skill-lt gap-2">
+                          <div className="d-flex align-items-center gap-2">
+                            <h6 className="dark-color mb-0">{skill.name}</h6>
+                            {skill.icon && <Image src={skill.icon} alt={skill.name} width={20} height={20} />}
+                          </div>
+                          <div className={`skill-bar ${inView ? 'open' : ''}`}>
+                            <div className="skill-bar-in" style={{ width: `${skill.value}%` }}>
+                              <span>{skill.value}%</span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  )}
+                </InView>
               </div>
             </div>
           </div>

@@ -79,13 +79,17 @@
   right: 0;
   z-index: 11;
   border-bottom: 1px solid var(--px-border);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 6px 0;
   background-color: var(--px-gray-1);
 }
+
 .main-header .container {
   display: flex;
   align-items: center;
+}
+
+.ms-auto {
+  display: flex;
 }
 
 .theme-btn .dropdown-toggle {
@@ -179,6 +183,7 @@
   color: var(--px-text);
   padding: 10px 0;
   font-weight: 500;
+  cursor: pointer;
 }
 @media (min-width: 1201px) {
   .main-menu li a:hover .m-icon {
@@ -1234,7 +1239,6 @@ a {
 
 .skill-lt h6 {
   font-size: 16px;
-  margin: 0 0 10px;
 }
 
 .skill-bar-in {
