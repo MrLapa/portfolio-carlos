@@ -1649,10 +1649,23 @@ a {
   transition: opacity 500ms ease-in-out;
 }
 
+@media (max-width: 991px) {
+  .ReactModal__Overlay {
+    max-width: 100%;
+  }
+}
+
 .ReactModal__Overlay--after-open {
   opacity: 1;
 }
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+}
+
+@media (max-width: 991px) {
+  .ReactModal__Content {
+    inset: 8px !important;
+    padding: 8px !important;
+  }
 }
