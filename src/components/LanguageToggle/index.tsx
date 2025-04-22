@@ -19,13 +19,16 @@ const LanguageToggle = () => {
   };
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className={styles['language-toggle']}
-      aria-label="Toggle language"
-    >
-      {currentLang === 'en' ? 'ES' : 'EN'}
-    </button>
+    <div className={`${styles['language-wrapper']}} d-flex flex-lg-column flex-row align-items-center gap-2`} >
+      <span className={styles['language-label']}>Language</span>
+      <button
+        onClick={toggleLanguage}
+        className={styles['language-toggle']}
+        aria-label="Toggle language"
+      >
+        {currentLang === 'en' ? 'ES' : 'EN'}
+      </button>
+    </div >
   );
 };
 
