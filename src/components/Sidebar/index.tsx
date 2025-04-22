@@ -24,20 +24,21 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
 
   return (
     <>
-      <header className="main-header d-lg-none position-fixed top-0 start-0 end-0 z-3 border-bottom py-2 bg-body-tertiary">
-        <div className="container">
-          <div className="ms-auto">
-            <button
-              className="toggler-menu"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <span />
-            </button>
-          </div>
+      <header className="main-header d-flex d-lg-none position-fixed top-0 start-0 end-0 z-3 border-bottom p-2 bg-body-tertiary">
+        <div className="d-lg-none">
+          <LanguageToggle />
+        </div>
+        <div className="ms-auto">
+          <button
+            className="toggler-menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span />
+          </button>
         </div>
       </header>
-      <div className={`header-left-fixed one-page-nav ${isMenuOpen ? "menu-open" : ""}`}>
-        <div className="d-flex d-lg-none justify-content-center px-3 pt-3">
+      <div className={`header-left-fixed one-page-nav justify-content-lg-between ${isMenuOpen ? "menu-open" : ""}`}>
+        <div className="d-flex d-lg-none justify-content-center">
           <button
             className="btn btn-link text-white fs-4 p-0"
             onClick={() => setIsMenuOpen(false)}
@@ -63,7 +64,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
             </li>
           ))}
         </ul>
-        <div className="logo">
+        <div className="d-none d-lg-block">
           <LanguageToggle />
         </div>
       </div>

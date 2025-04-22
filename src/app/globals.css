@@ -83,11 +83,6 @@
   background-color: var(--px-gray-1);
 }
 
-.main-header .container {
-  display: flex;
-  align-items: center;
-}
-
 .ms-auto {
   display: flex;
 }
@@ -156,7 +151,7 @@
 .main-menu {
   display: flex;
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
   list-style: none;
   justify-content: center;
 }
@@ -205,6 +200,7 @@
   z-index: 11;
   display: flex;
   flex-direction: column;
+  padding: 20px 0;
   transition: ease all 0.35s;
   background-color: var(--px-gray-2);
   border-right: 1px solid var(--px-border);
@@ -212,7 +208,7 @@
 .header-left-fixed.menu-open {
   left: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .header-left-fixed {
     left: 0 !important;
   }
