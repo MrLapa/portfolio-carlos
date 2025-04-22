@@ -1,0 +1,28 @@
+{
+  "welcome": {
+    "title": "Welcome to My Portfolio",
+    "description": "I'm a passionate developer creating amazing web experiences"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a full-stack developer with expertise in modern web technologies"
+  },
+  "services": {
+    "title": "Services",
+    "description": "Here are the services I offer"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Check out some of my recent work"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Let's work together",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  }
+}

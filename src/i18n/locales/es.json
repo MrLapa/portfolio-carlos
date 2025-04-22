@@ -1,0 +1,28 @@
+{
+  "welcome": {
+    "title": "Bienvenido a Mi Portafolio",
+    "description": "Soy un desarrollador apasionado creando experiencias web increíbles"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy un desarrollador full-stack con experiencia en tecnologías web modernas"
+  },
+  "services": {
+    "title": "Servicios",
+    "description": "Estos son los servicios que ofrezco"
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "description": "Echa un vistazo a algunos de mis trabajos recientes"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "Trabajemos juntos",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje"
+    }
+  }
+}
