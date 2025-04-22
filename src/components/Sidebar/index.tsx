@@ -3,6 +3,7 @@
 import useIsMobile from "@/src/hooks/useIsMobile";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import LanguageToggle from "../LanguageToggle";
 
 const menuItems = [
   { id: "home", href: "#home", iconClass: "bi-house-door", text: "Home" },
@@ -23,7 +24,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
 
   return (
     <>
-      <header className="main-header d-lg-none">
+      <header className="main-header d-lg-none position-fixed top-0 start-0 end-0 z-3 border-bottom py-2 bg-body-tertiary">
         <div className="container">
           <div className="ms-auto">
             <button
@@ -62,6 +63,9 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
             </li>
           ))}
         </ul>
+        <div className="logo">
+          <LanguageToggle />
+        </div>
       </div>
     </>
   )
