@@ -4,20 +4,23 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { FieldValues, useForm } from 'react-hook-form';
 import * as yup from "yup"
 import Input from '../Input';
-
-const validationSchema = yup
-  .object({
-    name: yup.string().required("Name is required"),
-    email: yup
-      .string()
-      .email("Email is not valid")
-      .required("Email is required"),
-    subject: yup.string().required("Subject is required"),
-    msg: yup.string().nullable(),
-  })
-  .required()
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
+  const validationSchema = yup
+    .object({
+      name: yup.string().required(t("contact.form.inputs.name.errors.required")),
+      email: yup
+        .string()
+        .email(t("contact.form.inputs.email.errors.valid"))
+        .required(t("contact.form.inputs.email.errors.required")),
+      subject: yup.string().required(t("contact.form.inputs.subject.errors.required")),
+      msg: yup.string().nullable(),
+    })
+    .required()
+
   const {
     register,
     handleSubmit,
@@ -36,8 +39,8 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <div className="contact-head">
-        <h4>Got Ideas? I&apos;ve got the skills. Let&apos;s team up!</h4>
-        <p>Share your vision, and I&apos;ll help bring it to life.</p>
+        <h4>{t("contact.form.title")}</h4>
+        <p>{t("contact.form.description")}</p>
       </div>
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
         {isSubmitSuccessful && (
@@ -47,7 +50,7 @@ const ContactForm = () => {
             style={{ display: "block" }}
           >
             <span className="contact_success">
-              Your message has been received, we will contact you soon.
+              {t("contact.form.success")}
             </span>
           </div>
         )}
@@ -57,8 +60,8 @@ const ContactForm = () => {
               <Input
                 register={register}
                 id="name"
-                label="First name"
-                placeholder="Name *"
+                label={t("contact.form.inputs.name.label")}
+                placeholder={t("contact.form.inputs.name.placeholder")}
                 error={errors.name}
               />
             </div>
@@ -68,8 +71,8 @@ const ContactForm = () => {
               <Input
                 register={register}
                 id="email"
-                label="Your email"
-                placeholder="E-mail *"
+                label={t("contact.form.inputs.email.label")}
+                placeholder={t("contact.form.inputs.email.placeholder")}
                 error={errors.email}
               />
             </div>
@@ -79,20 +82,23 @@ const ContactForm = () => {
               <Input
                 register={register}
                 id="subject"
-                label="Subject"
-                placeholder="Subject *"
+                label={t("contact.form.inputs.subject.label")}
+                placeholder={t("contact.form.inputs.subject.placeholder")}
                 error={errors.subject}
               />
             </div>
           </div>
           <div className="col-md-12">
             <div className="form-group">
-              <label htmlFor='message' className="form-label">Your message</label>
+              <label
+                htmlFor='message'
+                className="form-label">{t("contact.form.inputs.message.label")}
+              </label>
               <textarea
                 {...register("msg")}
                 name="msg"
                 id="message"
-                placeholder="Message"
+                placeholder={t("contact.form.inputs.message.placeholder")}
                 className={`form-control ${errors.msg ? "is-invalid" : ""}`}
               />
               {errors.msg && (
@@ -108,7 +114,7 @@ const ContactForm = () => {
                 disabled={isSubmitting}
                 className={`px-btn w-100 ${isSubmitting ? "disabled" : ""}`}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t("contact.form.inputs.sending") : t("contact.form.inputs.send")}
               </button>
             </div>
           </div>

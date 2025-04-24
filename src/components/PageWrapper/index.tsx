@@ -9,6 +9,7 @@ import Welcome from "@/src/screens/Welcome";
 import Footer from "../Footer";
 import { Element } from "react-scroll";
 import { useState } from "react";
+import I18nextProvider from "@/src/providers/I18nextProvider";
 
 type Sections = {
   [key: string]: {
@@ -31,7 +32,7 @@ const PageWrapper = () => {
   };
 
   return (
-    <>
+    <I18nextProvider>
       <Sidebar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="wrapper" onClick={() => setIsMenuOpen(false)}>
         {Object.keys(sections).map((section, index) => {
@@ -49,7 +50,7 @@ const PageWrapper = () => {
         })}
       </main>
       <Footer />
-    </>
+    </I18nextProvider>
   )
 }
 

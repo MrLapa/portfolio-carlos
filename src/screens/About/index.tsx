@@ -1,5 +1,15 @@
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
 import { InView } from "react-intersection-observer"
+
+type Experience = {
+  startDate: string;
+  endDate: string;
+  position: string;
+  company: string;
+  location: string;
+  description: string;
+}
 
 const skills = [
   { name: "React", value: 100, icon: "/assets/img/stack-icons/react.svg" },
@@ -14,58 +24,26 @@ const skills = [
   { name: "AI Tools (Copilot, Chat GPT)", value: 90, icon: "/assets/img/stack-icons/copilot.png" },
 ]
 
-const experiences = [
-  {
-    company: "Wizeline SAS",
-    position: "Software Engineer",
-    startDate: "2023",
-    endDate: "Present",
-    description: "Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.",
-    location: "Colombia"
-  },
-  {
-    company: "Miami Yachting",
-    position: "Frontend Developer",
-    startDate: "2024",
-    endDate: "2025",
-    description: "Developing a yacht marketplace with Gatsby, Axios, and Styled Components. Implemented dynamic filters, responsive UI, and fast-loading pages for a seamless search experience.",
-    location: "Miami, FL"
-  },
-  {
-    company: "BoatyardX SAS",
-    position: "Frontend Developer",
-    startDate: "2021",
-    endDate: "2022",
-    description: "Building responsive financial apps with Next.js and TypeScript. Created reusable components with Storybook and integrated GraphQL APIs. Ensured quality with Jest and Cypress tests.",
-    location: "Colombia"
-  },
-  {
-    company: "Falabella",
-    position: "Software Developer",
-    startDate: "2019",
-    endDate: "2020",
-    description: "Developing ASP.NET MVC and React apps. Built Web APIs and handled Oracle DBs for enterprise-grade solutions.",
-    location: "Colombia"
-  }
-]
-
 const About = () => {
+  const { t } = useTranslation<string>();
+  const experiences = t("about.experiences", { returnObjects: true }) as Experience[];
+
   return (
     <div className="container">
       <div className="about-me">
         <div className="row align-items-start">
           <div className="col-lg-5 pb-4 pb-lg-0">
             <div className="title-01">
-              <span>About Me</span>
+              <span>{t("about.title")}</span>
             </div>
             <div className="about-me-text pb-5">
               <p>
-                I&apos;m a Software Engineer with 9 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, write clean, maintainable code, and focus on crafting smooth, user-friendly experiences. I also leverage AI tools like ChatGPT and GitHub Copilot to boost productivity and explore creative solutions.
+                {t("about.background")}
               </p>
             </div>
             <hr />
             <div className="title-01 mt-5">
-              <span>Experience</span>
+              <span>{t("about.experience")}</span>
             </div>
             <div className="resume-box">
               <ul>
@@ -74,9 +52,9 @@ const About = () => {
                     <div className="icon">
                       <i className="bi bi-briefcase-fill" />
                     </div>
-                    <span className="time">{experience.startDate} - {experience.endDate}</span>
-                    <h5>{experience.position} – {experience.company} ({experience.location})</h5>
-                    <p>{experience.description}</p>
+                    <span className="time">{t(`about.experiences.${index}.startDate`)} - {t(`about.experiences.${index}.endDate`)}</span>
+                    <h5>{t(`about.experiences.${index}.position`)} – {t(`about.experiences.${index}.company`)} ({t(`about.experiences.${index}.location`)})</h5>
+                    <p>{t(`about.experiences.${index}.description`)}</p>
                   </li>))}
               </ul>
             </div>
@@ -99,7 +77,7 @@ const About = () => {
                         <a
                           className="text-reset stretched-link"
                           href="mailto:your-email@example.com?subject=Hello&body=I would like to get in touch with you.">
-                          Mail Me
+                          {t("about.mail")}
                         </a>
                       </div>
                     </li>
@@ -108,7 +86,7 @@ const About = () => {
                         <i className="bi bi-file-earmark-person-fill" />
                       </div>
                       <div className="a-text">
-                        <a className="text-reset stretched-link" href="/docs/carlos-garcia-frontend-resume-2025.pdf" target="_blank">Resume</a>
+                        <a className="text-reset stretched-link" href="/docs/carlos-garcia-frontend-resume-2025.pdf" target="_blank">{t("about.resume")}</a>
                       </div>
                     </li>
                   </ul>
@@ -116,7 +94,7 @@ const About = () => {
               </div>
               <div className="col-12 py-4">
                 <div className="title-01">
-                  <span>Skills</span>
+                  <span>{t("about.skills")}</span>
                 </div>
                 <InView triggerOnce>
                   {({ inView, ref }) => (
