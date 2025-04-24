@@ -1,28 +1,175 @@
 {
+  "sidebar": {
+    "language": "Language"
+  },
   "welcome": {
-    "title": "Welcome to My Portfolio",
-    "description": "I'm a passionate developer creating amazing web experiences"
+    "title": "Home",
+    "role": "Software Engineer"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a full-stack developer with expertise in modern web technologies"
+    "background": "I'm a Software Engineer with 9 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, write clean, maintainable code, and focus on crafting smooth, user-friendly experiences. I also leverage AI tools like ChatGPT and GitHub Copilot to boost productivity and explore creative solutions.",
+    "experience": "Experience",
+    "mail": "Mail Me",
+    "resume": "Resume",
+    "skills": "Skills",
+    "experiences": [
+      {
+        "company": "Wizeline SAS",
+        "position": "Software Engineer",
+        "startDate": "2023",
+        "endDate": "Presente",
+        "description": "Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.",
+        "location": "Colombia"
+      },
+      {
+        "company": "Miami Yachting",
+        "position": "Frontend Developer",
+        "startDate": "2024",
+        "endDate": "2025",
+        "description": "Developing a yacht marketplace with Gatsby, Axios, and Styled Components. Implemented dynamic filters, responsive UI, and fast-loading pages for a seamless search experience.",
+        "location": "Miami, FL"
+      },
+      {
+        "company": "BoatyardX SAS",
+        "position": "Frontend Developer",
+        "startDate": "2021",
+        "endDate": "2022",
+        "description": "Building responsive financial apps with Next.js and TypeScript. Created reusable components with Storybook and integrated GraphQL APIs. Ensured quality with Jest and Cypress tests.",
+        "location": "Colombia"
+      },
+      {
+        "company": "Falabella",
+        "position": "Software Developer",
+        "startDate": "2019",
+        "endDate": "2020",
+        "description": "Developing ASP.NET MVC and React apps. Built Web APIs and handled Oracle DBs for enterprise-grade solutions.",
+        "location": "Colombia"
+      }
+    ]
   },
   "services": {
-    "title": "Services",
-    "description": "Here are the services I offer"
+    "title": "My Services",
+    "items": [
+      {
+        "key": "frontend",
+        "title": "Front-End Development",
+        "description": "Modern, responsive, and maintainable interfaces built with React, TypeScript, and Next.js. I craft smooth user experiences using component-based architecture and best practices."
+      },
+      {
+        "key": "performance",
+        "title": "Performance Optimization and SEO",
+        "description": "Optimizing web apps for speed, SEO, and mobile responsiveness using Next.js features like image optimization, dynamic routing, and server-side rendering (SSR)."
+      },
+      {
+        "key": "testing",
+        "title": "Testing & Quality Assurance",
+        "description": "Robust testing strategies with Jest, React Testing Library, Vitest, and Cypress. I help ensure your UI works as expected across browsers and devices."
+      },
+      {
+        "key": "components",
+        "title": "Component Architecture",
+        "description": "Development of scalable and reusable UI libraries using Storybook and Material UI. Promoting design consistency and faster development cycles."
+      },
+      {
+        "key": "api",
+        "title": "API Integration",
+        "description": "Efficient data fetching and state management using TanStack Query (React Query), Apollo Client, and integration with GraphQL and REST APIs."
+      },
+      {
+        "key": "agile",
+        "title": "Agile Development & Collaboration",
+        "description": "Experience working in agile teams with strong communication, rapid iteration, and focus on delivering high-quality features on time."
+      }
+    ]
   },
   "portfolio": {
     "title": "Portfolio",
-    "description": "Check out some of my recent work"
+    "modal": {
+      "type": "Type:",
+      "stack": "Stack:",
+      "country": "Country:",
+      "liveURL": "Live URL:"
+    },
+    "items": {
+      "nerdwallet": {
+        "key": "nerdwallet",
+        "title": "Nerdwallet – Financial Services",
+        "subTitle": "A comprehensive financial services platform offering personalized advice and tools.",
+        "desc": "A comprehensive financial services platform offering personalized advice and tools to help users make informed decisions about their finances. The platform features a user-friendly interface, advanced filtering options, and a wealth of resources to assist users in navigating the complex world of personal finance.",
+        "type": "Website",
+        "stack": "TypeScript, Next.js, Apollo Client, GraphQL, MUI, Zod, Jest, React Testing Library, Storybook",
+        "country": "USA",
+        "liveURL": "https://www.nerdwallet.com/"
+      },
+      "miami-yachting": {
+        "key": "miami-yachting",
+        "title": "Miami Yachting – Services & Experiences",
+        "subTitle": "Full-service marine platform offering yacht management, charters, and personalized boating experiences.",
+        "desc": "A multi-page website built to showcase the full range of yacht-related services offered by Miami Yachting. The platform provides detailed information about yacht management, professional crew, maintenance programs, project oversight, and logistics. Designed to help users easily explore available services and get in touch with the team.",
+        "type": "Website",
+        "stack": "TypeScript, Gatsby, Styled components, MUI, Sass, Jest, React Testing Library",
+        "country": "USA",
+        "liveURL": "https://www.miamiyachting.net/"
+      },
+      "miami-yachting-sales": {
+        "key": "miami-yachting-sales",
+        "title": "Miami Yachting – Sales Platform",
+        "subTitle": "A global listing platform to discover and sell yachts, motor yachts, cruisers, and more.",
+        "desc": "A global marketplace built to help users browse, filter, and list a wide range of vessels including yachts, motor yachts, express cruisers, center consoles, and sailboats. Designed for performance and usability, this platform allows individuals and brokers to showcase vessels with detailed specs and high-quality images, making it easy for buyers around the world to explore available options. It features a search-friendly layout, intuitive filtering, and responsive design, all built with modern web technologies to ensure a smooth experience across devices.",
+        "type": "Website",
+        "stack": "React Router, Redux, Axios, Styled components, MUI, Sass, Jest, React Testing Library",
+        "country": "USA",
+        "liveURL": "https://sales.miamiyachting.net/"
+      },
+      "evidation": {
+        "key": "evidation",
+        "title": "Evidation App – Health & Wellness",
+        "subTitle": "A health and wellness app that rewards users for healthy activities.",
+        "desc": "A health and wellness app that rewards users for healthy activities. The platform features a user-friendly interface, personalized recommendations, and a variety of tools to help users track their progress and achieve their health goals. The app is designed to be engaging and motivating, encouraging users to stay active and make healthier choices.",
+        "type": "Cross-Platform App",
+        "stack": "TypeScript, TanStack Query, Axios, React Native, Zod, Zustand, Yup, React Hook Form",
+        "country": "USA",
+        "liveURL": "https://my.evidation.com/login"
+      }
+    }
   },
   "contact": {
-    "title": "Contact Me",
-    "description": "Let's work together",
+    "title": "Contact",
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "send": "Send Message"
+      "title": "Got Ideas? I've got the skills. Let's team up!",
+      "description": "Share your vision, and I'll help bring it to life.",
+      "success": "Your message has been received, we will contact you soon.",
+      "inputs": {
+        "name": {
+          "label": "First name",
+          "placeholder": "Name *",
+          "errors": {
+            "required": "Name is required"
+          }
+        },
+        "email": {
+          "label": "Your email",
+          "placeholder": "E-mail *",
+          "errors": {
+            "required": "E-mail is required",
+            "valid": "E-mail is not valid"
+          }
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Subject *",
+          "errors": {
+            "required": "Subject is required"
+          }
+        },
+        "message": {
+          "label": "Your message",
+          "placeholder": "Message"
+        },
+        "send": "Send Message",
+        "sending": "Sending..."
+      }
     }
   }
 }

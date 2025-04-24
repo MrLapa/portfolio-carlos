@@ -1,28 +1,171 @@
 {
+  "sidebar": {
+    "language": "Idioma"
+  },
   "welcome": {
-    "title": "Bienvenido a Mi Portafolio",
-    "description": "Soy un desarrollador apasionado creando experiencias web increíbles"
+    "title": "Inicio",
+    "role": "Ingeniero de Software"
   },
   "about": {
-    "title": "Sobre Mí",
-    "description": "Soy un desarrollador full-stack con experiencia en tecnologías web modernas"
+    "title": "Sobre mí",
+    "background": "Ingeniero de Software con 9 años de experiencia construyendo aplicaciones web de alta calidad, especializado en React, TypeScript, y tecnologías front-end. Prospero en equipos ágiles, escribo código limpio y mantenible, y me centro en crear experiencias fluidas y fáciles de usar. También aprovecho herramientas de IA como ChatGPT y GitHub Copilot para aumentar la productividad y explorar soluciones creativas.",
+    "experience": "Experiencia",
+    "mail": "Contáctame",
+    "resume": "Currículum",
+    "skills": "Habilidades",
+    "experiences": [
+      {
+        "company": "Wizeline SAS",
+        "position": "Software Engineer",
+        "startDate": "2023",
+        "endDate": "Presente",
+        "description": "Construcción interfaces de usuario de alto rendimiento con MUI y Next.js. Creación de pruebas unitarias con Jest y React Testing Library. Uso de TanStack Query y GraphQL para el manejo eficiente de datos.",
+        "location": "Colombia"
+      },
+      {
+        "company": "Miami Yachting",
+        "position": "Frontend Developer",
+        "startDate": "2024",
+        "endDate": "2025",
+        "description": "Desarrollo de un marketplace de yates con Gatsby, Axios y Styled Components. Implementación de filtros dinámicos, interfaz de usuario responsive y páginas de carga rápida para una experiencia de búsqueda eficiente.",
+        "location": "Miami, FL"
+      },
+      {
+        "company": "BoatyardX SAS",
+        "position": "Frontend Developer",
+        "startDate": "2021",
+        "endDate": "2022",
+        "description": "Construcción de aplicaciones financieras responsivas con Next.js y TypeScript. Creación de componentes reutilizables con Storybook e integración de APIs GraphQL. Aseguramiento de calidad a través de pruebas unitarias con Jest y Cypress.",
+        "location": "Colombia"
+      },
+      {
+        "company": "Falabella",
+        "position": "Software Developer",
+        "startDate": "2019",
+        "endDate": "2020",
+        "description": "Desarrollo de aplicaciones con ASP.NET MVC y React. Construcción de APIs Web y manejo de bases de datos Oracle para soluciones de alta calidad.",
+        "location": "Colombia"
+      }
+    ]
   },
   "services": {
-    "title": "Servicios",
-    "description": "Estos son los servicios que ofrezco"
+    "title": "Mis Servicios",
+    "items": [
+      {
+        "key": "frontend",
+        "title": "Desarrollo Frontend",
+        "description": "Interfaces modernas, adaptables y fáciles de mantener creadas con React, TypeScript y Next.js. Diseñamos experiencias de usuario fluidas utilizando arquitectura basada en componentes y buenas prácticas."
+      },
+      {
+        "key": "performance",
+        "title": "Optimización de Rendimiento y SEO",
+        "description": "Optimización de aplicaciones web para aumentar la velocidad, el SEO y la capacidad de respuesta móvil mediante funciones de Next.js como la optimización de imágenes, el enrutamiento dinámico y la renderización del lado del servidor (SSR)."
+      },
+      {
+        "key": "testing",
+        "title": "Pruebas y control de calidad",
+        "description": "Estrategias de pruebas robustas con Jest, React Testing Library, Vitest y Cypress. Ayudo a garantizar que tu interfaz de usuario funcione adecuadamente en todos los navegadores y dispositivos."
+      },
+      {
+        "key": "components",
+        "title": "Arquitectura de componentes",
+        "description": "Desarrollo de bibliotecas de interfaz de usuario escalables y reutilizables mediante Storybook y Material UI. Fomento de la consistencia del diseño y ciclos de desarrollo más rápidos."
+      },
+      {
+        "key": "api",
+        "title": "Integración API",
+        "description": "Obtención eficiente de datos y gestión del estado utilizando TanStack Query (React Query), Apollo Client, e integración con GraphQL y REST APIs."
+      },
+      {
+        "key": "agile",
+        "title": "Desarrollo ágil y colaboración",
+        "description": "Experiencia de trabajo en equipos ágiles con sólida comunicación, iteración rápida y enfoque en la entrega de soluciones de alta calidad a tiempo."
+      }
+    ]
   },
   "portfolio": {
-    "title": "Portafolio",
-    "description": "Echa un vistazo a algunos de mis trabajos recientes"
+    "title": "Mi Portafolio",
+    "modal": {
+      "type": "Tipo:",
+      "stack": "Stack:",
+      "country": "País:",
+      "liveURL": "URL del proyecto:"
+    },
+    "items": {
+      "nerdwallet": {
+        "title": "Nerdwallet – Servicios Financieros",
+        "subTitle": "Plataforma integral de servicios financieros que ofrece asesoramiento y herramientas personalizadas.",
+        "desc": "Plataforma integral de servicios financieros que ofrece asesoramiento personalizado y herramientas para ayudar a los usuarios a tomar decisiones informadas sobre sus finanzas. La plataforma cuenta con una interfaz fácil de usar, opciones avanzadas de filtrado y una gran cantidad de recursos para ayudar a los usuarios a navegar por el complejo mundo de las finanzas personales.",
+        "type": "Website",
+        "stack": "TypeScript, Next.js, Apollo Client, GraphQL, MUI, Zod, Jest, React Testing Library, Storybook",
+        "country": "USA",
+        "liveURL": "https://www.nerdwallet.com/"
+      },
+      "miami-yachting": {
+        "title": "Miami Yachting – Servicios y Experiencias",
+        "subTitle": "Plataforma náutica de servicios integrales que ofrece gestión de yates, chárter y experiencias náuticas personalizadas.",
+        "desc": "Sitio web de múltiples páginas creado para mostrar toda la gama de servicios relacionados con yates que ofrece Miami Yachting. La plataforma ofrece información detallada sobre gestión de yates, tripulación profesional, programas de mantenimiento, supervisión de proyectos y logística. Diseñado para ayudar a los usuarios a explorar fácilmente los servicios disponibles y ponerse en contacto con el equipo.",
+        "type": "Website",
+        "stack": "TypeScript, Gatsby, Styled components, MUI, Sass, Jest, React Testing Library",
+        "country": "USA",
+        "liveURL": "https://www.miamiyachting.net/"
+      },
+      "miami-yachting-sales": {
+        "title": "Miami Yachting – Plataforma de ventas",
+        "subTitle": "Plataforma global de anuncios para descubrir y vender yates, motoras, cruceros y mucho más.",
+        "desc": "Marketplace creado para ayudar a los usuarios a buscar, filtrar y listar una amplia gama de embarcaciones, incluidos yates, yates a motor, cruceros exprés, consolas centrales y veleros. Diseñada para ofrecer rendimiento y facilidad de uso, esta plataforma permite a particulares y agentes mostrar embarcaciones con especificaciones detalladas e imágenes de alta calidad, facilitando a los compradores de todo el mundo la exploración de las opciones disponibles. Cuenta con un diseño que facilita las búsquedas, un filtrado intuitivo y un diseño adaptable, todo ello creado con modernas tecnologías web para garantizar una experiencia fluida en todos los dispositivos.",
+        "type": "Website",
+        "stack": "React Router, Redux, Axios, Styled components, MUI, Sass, Jest, React Testing Library",
+        "country": "USA",
+        "liveURL": "https://sales.miamiyachting.net/"
+      },
+      "evidation": {
+        "title": "Evidation App – Salud y bienestar",
+        "subTitle": "Aplicación de salud y bienestar que recompensa a los usuarios por realizar actividades saludables.",
+        "desc": "Aplicación de salud y bienestar que recompensa a los usuarios por realizar actividades saludables. La plataforma cuenta con una interfaz fácil de usar, recomendaciones personalizadas y una variedad de herramientas para ayudar a los usuarios a seguir su progreso y alcanzar sus objetivos de salud. La aplicación está diseñada para ser atractiva y motivadora, animando a los usuarios a mantenerse activos y tomar decisiones más saludables.",
+        "type": "Aplicación multiplataforma",
+        "stack": "TypeScript, TanStack Query, Axios, React Native, Zod, Zustand, Yup, React Hook Form",
+        "country": "USA",
+        "liveURL": "https://my.evidation.com/login"
+      }
+    }
   },
   "contact": {
-    "title": "Contáctame",
-    "description": "Trabajemos juntos",
+    "title": "Contacto",
     "form": {
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "message": "Mensaje",
-      "send": "Enviar Mensaje"
+      "title": "¿Tienes ideas? Tengo las habilidades ¡Trabajemos juntos!",
+      "description": "Comparte tu visión, y te ayudaré a darle vida.",
+      "success": "Tu mensaje ha sido recibido, te contactaremos pronto.",
+      "inputs": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Nombre *",
+          "errors": {
+            "required": "Nombre es requerido"
+          }
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "Correo electrónico *",
+          "errors": {
+            "required": "Correo electrónico es requerido",
+            "valid": "Correo electrónico no es válido"
+          }
+        },
+        "subject": {
+          "label": "Asunto",
+          "placeholder": "Asunto *",
+          "errors": {
+            "required": "Asunto es requerido"
+          }
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Mensaje"
+        },
+        "send": "Enviar mensaje",
+        "sending": "Enviando..."
+      }
     }
   }
 }
