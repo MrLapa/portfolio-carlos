@@ -142,23 +142,23 @@
       "success": "Your message has been received, we will contact you soon.",
       "inputs": {
         "name": {
-          "label": "First name",
-          "placeholder": "Name *",
+          "label": "First name *",
+          "placeholder": "Name",
           "errors": {
             "required": "Name is required"
           }
         },
         "email": {
-          "label": "Your email",
-          "placeholder": "E-mail *",
+          "label": "Your email *",
+          "placeholder": "E-mail",
           "errors": {
             "required": "E-mail is required",
             "valid": "E-mail is not valid"
           }
         },
         "subject": {
-          "label": "Subject",
-          "placeholder": "Subject *",
+          "label": "Subject *",
+          "placeholder": "Subject",
           "errors": {
             "required": "Subject is required"
           }

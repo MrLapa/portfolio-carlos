@@ -138,23 +138,23 @@
       "success": "Tu mensaje ha sido recibido, te contactaremos pronto.",
       "inputs": {
         "name": {
-          "label": "Nombre",
-          "placeholder": "Nombre *",
+          "label": "Nombre *",
+          "placeholder": "Nombre",
           "errors": {
             "required": "Nombre es requerido"
           }
         },
         "email": {
-          "label": "Correo electrónico",
-          "placeholder": "Correo electrónico *",
+          "label": "Correo electrónico *",
+          "placeholder": "Correo electrónico",
           "errors": {
             "required": "Correo electrónico es requerido",
             "valid": "Correo electrónico no es válido"
           }
         },
         "subject": {
-          "label": "Asunto",
-          "placeholder": "Asunto *",
+          "label": "Asunto *",
+          "placeholder": "Asunto",
           "errors": {
             "required": "Asunto es requerido"
           }
