@@ -5,9 +5,10 @@ import { FieldValues, useForm } from 'react-hook-form';
 import * as yup from "yup"
 import Input from '../Input';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const ContactForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const validationSchema = yup
     .object({
@@ -26,9 +27,15 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
+    clearErrors,
   } = useForm({
     resolver: yupResolver(validationSchema)
   });
+
+  useEffect(() => {
+    clearErrors();
+    reset();
+  }, [i18n.language, clearErrors, reset]);
 
   const onSubmit = async (data: FieldValues) => {
     console.log("Form Submitted:", data);
