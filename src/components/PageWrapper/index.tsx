@@ -9,7 +9,7 @@ import Welcome from "@/src/screens/Welcome";
 import Footer from "../Footer";
 import { Element } from "react-scroll";
 import { useState } from "react";
-import I18nextProvider from "../I18nextProvider";
+import I18nextProvider from "@/src/providers/I18nextProvider";
 
 type Sections = {
   [key: string]: {

@@ -26,4 +26,4 @@ const I18nextProvider = ({ children }: I18nextProviderProps) => {
   );
 };
 
-export default I18nextProvider; 
+export default I18nextProvider;
