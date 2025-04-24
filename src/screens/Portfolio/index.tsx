@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
-import { projects } from "./data";
 import { Project } from "./types";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,16 +10,19 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useTranslation } from "react-i18next";
+import { projectsGallery } from "./data";
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<Project | null>(null);
+  const [projectKey, setProjectKey] = useState<string | null>(null);
+  const { t } = useTranslation();
 
-  function toggleModalOne(value?: Project) {
+  function toggleModalOne(key?: string) {
     setIsModalOpen(!isModalOpen);
 
-    if (value) {
-      setModalContent(value);
+    if (key) {
+      setProjectKey(key);
     }
   }
 
@@ -28,22 +30,22 @@ const Portfolio = () => {
     <div className="container">
       <div className="section-heading">
         <h3>
-          <span>My Portfolio</span>
+          <span>{t("portfolio.title")}</span>
         </h3>
       </div>
       <div className="lightbox-gallery">
         <div className="row g-3 g-lg-4 portfolio-content">
-          {projects.map((data, index) => (
-            <div className="col-sm-6 col-lg-4 grid-item" key={index}>
+          {Object.entries(t('portfolio.items', { returnObjects: true })).map(([key, project]: [string, Project]) => (
+            <div className="col-sm-6 col-lg-4 grid-item" key={key}>
               <div className="portfolio-box">
                 <div className="portfolio-text">
-                  <h6>{data.title}</h6>
-                  <p>{data.subTitle}</p>
+                  <h6>{project.title}</h6>
+                  <p>{project.subTitle}</p>
                 </div>
                 <div className="portfolio-img">
                   <div style={{ maxHeight: "318px", overflow: "hidden" }}>
                     <Image
-                      src={data.thumbnail}
+                      src={projectsGallery[key].thumbnail}
                       alt="welcome image"
                       width={500}
                       height={500}
@@ -54,7 +56,7 @@ const Portfolio = () => {
                     />
                   </div>
                   <a
-                    onClick={() => toggleModalOne(data)}
+                    onClick={() => toggleModalOne(key)}
                     className="px_modal portfolio-modal-link"
                     href="#project_1"
                   >
@@ -65,7 +67,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        {modalContent && (
+        {projectKey && (
           <Modal
             isOpen={isModalOpen}
             onRequestClose={() => toggleModalOne()}
@@ -90,7 +92,7 @@ const Portfolio = () => {
                         modules={[Navigation]}
                         navigation
                       >
-                        {modalContent.galleryImages.map((image, index) => (
+                        {projectsGallery[projectKey].galleryImages.map((image, index) => (
                           <SwiperSlide key={index}>
                             <Image
                               src={image}
@@ -108,26 +110,28 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <div className="col-lg-5 pt-4 pt-lg-0">
-                    <h4>{modalContent.title}</h4>
-                    <p className="mb-3">{modalContent.desc}</p>
+                    <h4>{t(`portfolio.items.${projectKey}.title`)}</h4>
+                    <p className="mb-3">{t(`portfolio.items.${projectKey}.desc`)}</p>
                     <div className="about-content">
                       <ul>
                         <li className="d-flex flex-wrap">
-                          <span className="col-12 col-xxl-3">Type:</span>
-                          <span className="col-12 col-xxl-9">{modalContent.type}</span>
+                          <span className="col-12 col-xxl-3">{t('portfolio.modal.type')}</span>
+                          <span className="col-12 col-xxl-9">{t(`portfolio.items.${projectKey}.type`)}</span>
                         </li>
                         <li className="d-flex flex-wrap align-items-start">
-                          <span className="col-12 col-xxl-3">Stack:</span>
-                          <span className="col-12 col-xxl-9">{modalContent.languages}</span>
+                          <span className="col-12 col-xxl-3">{t('portfolio.modal.stack')}</span>
+                          <span className="col-12 col-xxl-9">{t(`portfolio.items.${projectKey}.stack`)}</span>
                         </li>
                         <li className="d-flex flex-wrap">
-                          <span className="col-12 col-xxl-3">Country:</span>
-                          <span className="col-12 col-xxl-9">{modalContent.country}</span>
+                          <span className="col-12 col-xxl-3">{t('portfolio.modal.country')}</span>
+                          <span className="col-12 col-xxl-9">{t(`portfolio.items.${projectKey}.country`)}</span>
                         </li>
                         <li className="d-flex flex-wrap">
-                          <span className="col-12 col-xxl-3">Live URL:</span>
+                          <span className="col-12 col-xxl-3">{t('portfolio.modal.liveURL')}</span>
                           <span className="col-12 col-xxl-9">
-                            <a href={modalContent.liveURL} target="_blank">{modalContent.liveURL}</a>
+                            <a href={t(`portfolio.items.${projectKey}.liveURL`)} target="_blank">
+                              {t(`portfolio.items.${projectKey}.liveURL`)}
+                            </a>
                           </span>
                         </li>
                       </ul>

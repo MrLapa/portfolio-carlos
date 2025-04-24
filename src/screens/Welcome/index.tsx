@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { useTranslation } from 'react-i18next';
 
 const Welcome = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className="bg-effect-img" style={{ backgroundImage: 'url(assets/img/bg-effect-1.png)' }}>
@@ -28,7 +31,7 @@ const Welcome = () => {
               </div>
               <div className="home-intro d-flex align-items-center flex-column">
                 <h1>Carlos Garcia</h1>
-                <h2>Software Engineer</h2>
+                <h2>{t("welcome.role")}</h2>
                 <ul className="nav social-link">
                   <li>
                     <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'><i className="bi bi-linkedin" /></a>
