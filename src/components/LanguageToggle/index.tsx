@@ -32,4 +32,4 @@ const LanguageToggle = () => {
   );
 };
 
-export default LanguageToggle; 
+export default LanguageToggle;
