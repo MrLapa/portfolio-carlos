@@ -86,7 +86,23 @@ const About = () => {
                         <i className="bi bi-file-earmark-person-fill" />
                       </div>
                       <div className="a-text">
-                        <a className="text-reset stretched-link" href="/docs/carlos-garcia-frontend-resume-2025.pdf" target="_blank">{t("about.resume")}</a>
+                        <a
+                          className="text-reset stretched-link"
+                          href="/docs/carlos-garcia-frontend-resume-2025.pdf"
+                          target="_blank">{t("about.resume")}
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="a-icon">
+                        <i className="bi bi-github" />
+                      </div>
+                      <div className="a-text">
+                        <a
+                          className="text-reset stretched-link"
+                          href="https://github.com/MrLapa"
+                          target="_blank">{t("about.github")}
+                        </a>
                       </div>
                     </li>
                   </ul>
