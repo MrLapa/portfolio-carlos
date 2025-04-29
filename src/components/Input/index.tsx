@@ -1,13 +1,13 @@
-import React from "react";
-import { FieldError, FieldValues, Path, UseFormRegister } from "react-hook-form";
+import React from "react"
+import { FieldError, FieldValues, Path, UseFormRegister } from "react-hook-form"
 
 type InputProps<T extends FieldValues> = {
-  id: Path<T>;
-  label: string;
-  register: UseFormRegister<T>;
-  type?: string;
-  placeholder?: string;
-  error?: FieldError;
+  id: Path<T>
+  label: string
+  register: UseFormRegister<T>
+  type?: string
+  placeholder?: string
+  error?: FieldError
 }
 
 const Input = <T extends FieldValues>({
@@ -32,7 +32,7 @@ const Input = <T extends FieldValues>({
       />
       {error && <span className="text-danger">{error.message}</span>}
     </>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

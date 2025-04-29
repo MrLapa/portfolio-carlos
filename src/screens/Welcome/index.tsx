@@ -1,12 +1,15 @@
-import Image from 'next/image'
-import { useTranslation } from 'react-i18next';
+import Image from "next/image"
+import { useTranslation } from "react-i18next"
 
 const Welcome = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div>
-      <div className="bg-effect-img" style={{ backgroundImage: 'url(assets/img/bg-effect-1.png)' }}>
+      <div
+        className="bg-effect-img"
+        style={{ backgroundImage: "url(assets/img/bg-effect-1.png)" }}
+      >
         <div className="marquee">
           <h2>Carlos Garcia Carlos Garcia Carlos Garcia Carlos Garcia</h2>
         </div>
@@ -34,10 +37,17 @@ const Welcome = () => {
                 <h2>{t("welcome.role")}</h2>
                 <ul className="nav social-link">
                   <li>
-                    <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'><i className="bi bi-linkedin" /></a>
+                    <a
+                      href="https://www.linkedin.com/in/carlos-ali-garcia/"
+                      target="_blank"
+                    >
+                      <i className="bi bi-linkedin" />
+                    </a>
                   </li>
                   <li>
-                    <a href="https://github.com/MrLapa" target='_blank'><i className="bi bi-github" /></a>
+                    <a href="https://github.com/MrLapa" target="_blank">
+                      <i className="bi bi-github" />
+                    </a>
                   </li>
                 </ul>
               </div>

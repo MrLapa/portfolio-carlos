@@ -1,4 +1,4 @@
-import { ProjectGallery } from "./types";
+import { ProjectGallery } from "./types"
 
 export const projectsGallery: ProjectGallery = {
   nerdwallet: {
@@ -36,4 +36,4 @@ export const projectsGallery: ProjectGallery = {
       "/assets/img/evidation/evidation-4.png",
     ],
   },
-};
+}
