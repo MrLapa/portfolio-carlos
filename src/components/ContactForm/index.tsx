@@ -1,23 +1,27 @@
-'use client'
+"use client"
 
-import { yupResolver } from '@hookform/resolvers/yup';
-import { FieldValues, useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup"
+import { FieldValues, useForm } from "react-hook-form"
 import * as yup from "yup"
-import Input from '../Input';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import Input from "../Input"
+import { useTranslation } from "react-i18next"
+import { useEffect } from "react"
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const validationSchema = yup
     .object({
-      name: yup.string().required(t("contact.form.inputs.name.errors.required")),
+      name: yup
+        .string()
+        .required(t("contact.form.inputs.name.errors.required")),
       email: yup
         .string()
         .email(t("contact.form.inputs.email.errors.valid"))
         .required(t("contact.form.inputs.email.errors.required")),
-      subject: yup.string().required(t("contact.form.inputs.subject.errors.required")),
+      subject: yup
+        .string()
+        .required(t("contact.form.inputs.subject.errors.required")),
       msg: yup.string().nullable(),
     })
     .required()
@@ -29,19 +33,19 @@ const ContactForm = () => {
     reset,
     clearErrors,
   } = useForm({
-    resolver: yupResolver(validationSchema)
-  });
+    resolver: yupResolver(validationSchema),
+  })
 
   useEffect(() => {
-    clearErrors();
-    reset();
-  }, [i18n.language, clearErrors, reset]);
+    clearErrors()
+    reset()
+  }, [i18n.language, clearErrors, reset])
 
   const onSubmit = async (data: FieldValues) => {
-    console.log("Form Submitted:", data);
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-    reset();
-  };
+    console.log("Form Submitted:", data)
+    await new Promise((resolve) => setTimeout(resolve, 4000))
+    reset()
+  }
 
   return (
     <div className="contact-form">
@@ -56,9 +60,7 @@ const ContactForm = () => {
             data-success="Your message has been received, we will contact you soon."
             style={{ display: "block" }}
           >
-            <span className="contact_success">
-              {t("contact.form.success")}
-            </span>
+            <span className="contact_success">{t("contact.form.success")}</span>
           </div>
         )}
         <div className="row gx-3 gy-4">
@@ -97,9 +99,8 @@ const ContactForm = () => {
           </div>
           <div className="col-md-12">
             <div className="form-group">
-              <label
-                htmlFor='message'
-                className="form-label">{t("contact.form.inputs.message.label")}
+              <label htmlFor="message" className="form-label">
+                {t("contact.form.inputs.message.label")}
               </label>
               <textarea
                 {...register("msg")}
@@ -121,7 +122,9 @@ const ContactForm = () => {
                 disabled={isSubmitting}
                 className={`px-btn w-100 ${isSubmitting ? "disabled" : ""}`}
               >
-                {isSubmitting ? t("contact.form.inputs.sending") : t("contact.form.inputs.send")}
+                {isSubmitting
+                  ? t("contact.form.inputs.sending")
+                  : t("contact.form.inputs.send")}
               </button>
             </div>
           </div>

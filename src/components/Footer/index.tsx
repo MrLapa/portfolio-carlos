@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image"
+import React from "react"
 
 const Footer = () => {
   return (
@@ -22,12 +22,15 @@ const Footer = () => {
         </div>
         <ul className="nav social-link">
           <li>
-            <a href="https://www.linkedin.com/in/carlos-ali-garcia/" target='_blank'>
+            <a
+              href="https://www.linkedin.com/in/carlos-ali-garcia/"
+              target="_blank"
+            >
               <i className="bi bi-linkedin" />
             </a>
           </li>
           <li>
-            <a href="https://github.com/MrLapa" target='_blank'>
+            <a href="https://github.com/MrLapa" target="_blank">
               <i className="bi bi-github" />
             </a>
           </li>

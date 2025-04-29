@@ -1,29 +1,54 @@
-'use client'
+"use client"
 
-import useIsMobile from "@/src/hooks/useIsMobile";
-import { useState } from "react";
-import { Link } from "react-scroll";
-import LanguageToggle from "../LanguageToggle";
-import { useTranslation } from "react-i18next";
+import useIsMobile from "@/src/hooks/useIsMobile"
+import { useState } from "react"
+import { Link } from "react-scroll"
+import LanguageToggle from "../LanguageToggle"
+import { useTranslation } from "react-i18next"
 
 type SidebarProps = {
-  isMenuOpen: boolean;
-  setIsMenuOpen: (isOpen: boolean) => void;
+  isMenuOpen: boolean
+  setIsMenuOpen: (isOpen: boolean) => void
 }
 
 const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
   const [activeLink, setActiveLink] = useState("home")
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile()
 
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const menuItems = [
-    { id: "home", href: "#home", iconClass: "bi-house-door", text: t("welcome.title") },
-    { id: "about", href: "#about", iconClass: "bi-person", text: t("about.title") },
-    { id: "services", href: "#services", iconClass: "bi-briefcase", text: t("services.title") },
-    { id: "portfolio", href: "#portfolio", iconClass: "bi-columns", text: t("portfolio.title") },
-    { id: "contactus", href: "#contactus", iconClass: "bi-telephone", text: t("contact.title") },
-  ];
+    {
+      id: "home",
+      href: "#home",
+      iconClass: "bi-house-door",
+      text: t("welcome.title"),
+    },
+    {
+      id: "about",
+      href: "#about",
+      iconClass: "bi-person",
+      text: t("about.title"),
+    },
+    {
+      id: "services",
+      href: "#services",
+      iconClass: "bi-briefcase",
+      text: t("services.title"),
+    },
+    {
+      id: "portfolio",
+      href: "#portfolio",
+      iconClass: "bi-columns",
+      text: t("portfolio.title"),
+    },
+    {
+      id: "contactus",
+      href: "#contactus",
+      iconClass: "bi-telephone",
+      text: t("contact.title"),
+    },
+  ]
 
   return (
     <>
@@ -40,7 +65,9 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
           </button>
         </div>
       </header>
-      <div className={`header-left-fixed one-page-nav justify-content-lg-between pb-5 ${isMenuOpen ? "menu-open" : ""}`}>
+      <div
+        className={`header-left-fixed one-page-nav justify-content-lg-between pb-5 ${isMenuOpen ? "menu-open" : ""}`}
+      >
         <div className="d-flex d-lg-none justify-content-center">
           <button
             className="btn btn-link text-white fs-4 p-0"
@@ -52,7 +79,10 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }: SidebarProps) => {
         </div>
         <ul className="main-menu">
           {menuItems.map((item, index) => (
-            <li key={`item-${index}`} className={activeLink === item.id ? "active" : ""}>
+            <li
+              key={`item-${index}`}
+              className={activeLink === item.id ? "active" : ""}
+            >
               <Link
                 spy
                 to={item.id}
