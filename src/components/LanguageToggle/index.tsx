@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 const LanguageToggle = () => {
   const { i18n, t } = useTranslation()
-  const [currentLang, setCurrentLang] = useState("en")
+  const [currentLang, setCurrentLang] = useState("en");
 
   useEffect(() => {
     setCurrentLang(i18n.language)
