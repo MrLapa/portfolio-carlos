@@ -4,11 +4,11 @@
   },
   "welcome": {
     "title": "Home",
-    "role": "Software Engineer"
+    "role": "AI-Driven Senior Software Engineer"
   },
   "about": {
     "title": "About Me",
-    "background": "I'm a Software Engineer with 9 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, write clean, maintainable code, and focus on crafting smooth, user-friendly experiences. I also leverage AI tools like ChatGPT and GitHub Copilot to boost productivity and explore creative solutions.",
+    "background": "AI-Driven Senior Software Engineer with 9+ years of experience building and scaling modern web applications, specializing in React, Next.js, and TypeScript. I leverage AI-assisted development and autonomous agents to accelerate delivery, improve code quality, and support architectural decisions. Beyond manual implementation, I orchestrate AI-driven workflows for task decomposition, code generation, and large-scale refactoring — while ensuring alignment with clean code principles and scalable architecture.",
     "experience": "Experience",
     "mail": "Mail Me",
     "resume": "Resume",
@@ -17,10 +17,10 @@
     "experiences": [
       {
         "company": "Wizeline SAS",
-        "position": "Software Engineer",
+        "position": "Senior Software Engineer (Frontend / AI-Driven)",
         "startDate": "2023",
-        "endDate": "Presente",
-        "description": "Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.",
+        "endDate": "Present",
+        "description": "Leveraging AI-assisted and agentic workflows (GitHub Copilot, VSCode agents) to accelerate delivery. Designing scalable frontend components with TypeScript, MUI, and Tailwind CSS. Optimizing performance (SSR/SSG) and data-fetching with Next.js 13+, GraphQL, and TanStack Query.",
         "location": "Colombia"
       },
       {
@@ -53,6 +53,11 @@
     "title": "My Services",
     "items": [
       {
+        "key": "ai",
+        "title": "AI-Assisted Development & Agentic Workflows",
+        "description": "Accelerating delivery through AI-driven workflows using GitHub Copilot, Cursor, and autonomous agents for task decomposition, code generation, and large-scale refactoring."
+      },
+      {
         "key": "frontend",
         "title": "Front-End Development",
         "description": "Modern, responsive, and maintainable interfaces built with React, TypeScript, and Next.js. I craft smooth user experiences using component-based architecture and best practices."
@@ -76,11 +81,6 @@
         "key": "api",
         "title": "API Integration",
         "description": "Efficient data fetching and state management using TanStack Query (React Query), Apollo Client, and integration with GraphQL and REST APIs."
-      },
-      {
-        "key": "agile",
-        "title": "Agile Development & Collaboration",
-        "description": "Experience working in agile teams with strong communication, rapid iteration, and focus on delivering high-quality features on time."
       }
     ]
   },

@@ -4,11 +4,11 @@
   },
   "welcome": {
     "title": "Inicio",
-    "role": "Ingeniero de Software"
+    "role": "Ingeniero de Software Senior impulsado por IA"
   },
   "about": {
     "title": "Sobre mí",
-    "background": "Ingeniero de Software con 9 años de experiencia construyendo aplicaciones web de alta calidad, especializado en React, TypeScript, y tecnologías front-end. Prospero en equipos ágiles, escribo código limpio y mantenible, y me centro en crear experiencias fluidas y fáciles de usar. También aprovecho herramientas de IA como ChatGPT y GitHub Copilot para aumentar la productividad y explorar soluciones creativas.",
+    "background": "Ingeniero de Software Senior impulsado por IA con más de 9 años de experiencia construyendo y escalando aplicaciones web modernas, especializado en React, Next.js y TypeScript. Aprovecho el desarrollo asistido por IA y agentes autónomos para acelerar entregas, mejorar la calidad del código y apoyar decisiones arquitectónicas. Más allá de la implementación manual, orquesto flujos de trabajo impulsados por IA para descomposición de tareas, generación de código y refactorización a gran escala — asegurando alineación con principios de código limpio y arquitectura escalable.",
     "experience": "Experiencia",
     "mail": "Contáctame",
     "resume": "Currículum",
@@ -17,10 +17,10 @@
     "experiences": [
       {
         "company": "Wizeline SAS",
-        "position": "Software Engineer",
+        "position": "Senior Software Engineer (Frontend / AI-Driven)",
         "startDate": "2023",
         "endDate": "Presente",
-        "description": "Construcción interfaces de usuario de alto rendimiento con MUI y Next.js. Creación de pruebas unitarias con Jest y React Testing Library. Uso de TanStack Query y GraphQL para el manejo eficiente de datos.",
+        "description": "Aprovechando flujos de trabajo asistidos por IA y agénticos (GitHub Copilot, agentes VSCode) para acelerar entregas. Diseñando componentes frontend escalables con TypeScript, MUI y Tailwind CSS. Optimizando rendimiento (SSR/SSG) y obtención de datos con Next.js 13+, GraphQL y TanStack Query.",
         "location": "Colombia"
       },
       {
@@ -53,6 +53,11 @@
     "title": "Mis Servicios",
     "items": [
       {
+        "key": "ai",
+        "title": "Desarrollo asistido por IA y flujos agénticos",
+        "description": "Acelerando entregas mediante flujos de trabajo impulsados por IA con GitHub Copilot, Cursor y agentes autónomos para descomposición de tareas, generación de código y refactorización a gran escala."
+      },
+      {
         "key": "frontend",
         "title": "Desarrollo Frontend",
         "description": "Interfaces modernas, adaptables y fáciles de mantener creadas con React, TypeScript y Next.js. Diseñamos experiencias de usuario fluidas utilizando arquitectura basada en componentes y buenas prácticas."
@@ -76,11 +81,6 @@
         "key": "api",
         "title": "Integración API",
         "description": "Obtención eficiente de datos y gestión del estado utilizando TanStack Query (React Query), Apollo Client, e integración con GraphQL y REST APIs."
-      },
-      {
-        "key": "agile",
-        "title": "Desarrollo ágil y colaboración",
-        "description": "Experiencia de trabajo en equipos ágiles con sólida comunicación, iteración rápida y enfoque en la entrega de soluciones de alta calidad a tiempo."
       }
     ]
   },
