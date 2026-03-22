@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next"
 const Welcome = () => {
   const { t } = useTranslation()
 
+  //this is a new test
+
   return (
     <div>
       <div
