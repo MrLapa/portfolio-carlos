@@ -19,6 +19,10 @@
   - `F-33: add eslint and prettier configuration`
   - `B-12: fix sidebar layout on mobile`
 
+### Pull request descriptions
+- Follow the template at `.github/PULL_REQUEST_TEMPLATE.md`
+- Provide the PR description in markdown format, ready to copy and paste
+
 ## Project
 
 - **Framework:** Next.js 15 with React 19 and TypeScript
