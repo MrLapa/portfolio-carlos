@@ -59,18 +59,13 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 
 ## Section 4: Portfolio
 
-**Files:** `en.json`, `es.json`
-
-- [ ] Update Nerdwallet/Wizeline project description to mention AI-assisted workflows
-- [ ] (Optional) Update Evidation description similarly
+~~Skipped — project descriptions don't need AI references; the AI focus is already clear from Welcome, About, and Services.~~
 
 ---
 
 ## Section 5: Contact
 
-**Files:** `en.json`, `es.json`
-
-- [ ] Update tagline to reflect AI-driven partnership
+~~Skipped — current tagline works well; adding AI here would be redundant.~~
 
 ---
 
@@ -78,7 +73,8 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 
 **Files:** `src/app/layout.tsx`
 
-- [ ] Update `description` and `keywords` meta tags to include AI-driven development, agentic workflows
+- [x] Update `description` meta tag with AI-driven identity
+- [x] Update `keywords` meta tag with AI-related terms
 
 ---
 
@@ -89,6 +85,6 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 | Welcome   | Done        |
 | About     | Done        |
 | Services  | Done        |
-| Portfolio | Not started |
-| Contact   | Not started |
-| Metadata  | Not started |
+| Portfolio | Skipped     |
+| Contact   | Skipped     |
+| Metadata  | Done        |

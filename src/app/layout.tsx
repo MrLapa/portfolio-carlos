@@ -16,8 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Carlos Garcia Portfolio",
-  description: "Carlos Garcia Portfolio Web Development Projects",
-  keywords: "Software Development, FE Development, Web Development",
+  description:
+    "AI-Driven Senior Software Engineer specializing in React, Next.js, and TypeScript. Leveraging AI-assisted development and agentic workflows to build scalable web applications.",
+  keywords:
+    "AI-Driven Development, Agentic Workflows, React, Next.js, TypeScript, Frontend Engineering, GitHub Copilot, Software Engineer",
   authors: [{ name: "Carlos Garcia" }],
 }
 
