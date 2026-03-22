@@ -25,20 +25,20 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 **Files:** `src/screens/About/index.tsx` (hardcoded skills), `en.json`, `es.json`
 
 ### 2A. Background text
-- [ ] Rewrite `about.background` in `en.json` — lead with AI-driven identity, agentic workflows, task decomposition
-- [ ] Rewrite `about.background` in `es.json` — same content in Spanish
+- [x] Rewrite `about.background` in `en.json` — lead with AI-driven identity, agentic workflows, task decomposition
+- [x] Rewrite `about.background` in `es.json` — same content in Spanish
 
 ### 2B. Skills array
-- [ ] Move "AI Tools" from position 10 to position 3–4 in `About/index.tsx`
-- [ ] Rename to "AI-Assisted Development (Copilot, Cursor, ChatGPT)"
-- [ ] Add Cursor to the entry (missing from current list)
+- [x] Move "AI Tools" from position 10 to position 3–4 in `About/index.tsx`
+- [x] Rename to "AI-Assisted Development (Copilot, Cursor, ChatGPT)"
+- [x] Add Cursor to the entry (missing from current list)
 
 ### 2C. Experiences
-- [ ] Update Wizeline `position` → "Senior Software Engineer (Frontend / AI-Driven)" in `en.json` + `es.json`
-- [ ] Rewrite Wizeline `description` to highlight AI-assisted and agentic workflows in `en.json` + `es.json`
+- [x] Update Wizeline `position` → "Senior Software Engineer (Frontend / AI-Driven)" in `en.json` + `es.json`
+- [x] Rewrite Wizeline `description` to highlight AI-assisted and agentic workflows in `en.json` + `es.json`
 
 ### 2D. Resume PDF link
-- [ ] Verify/update resume PDF filename in `About/index.tsx`
+- [ ] Verify/update resume PDF filename in `About/index.tsx` — current PDF exists, replace with updated version when ready
 
 ---
 
@@ -82,7 +82,7 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 | Section   | Status      |
 | --------- | ----------- |
 | Welcome   | Done        |
-| About     | Not started |
+| About     | Done        |
 | Services  | Not started |
 | Portfolio | Not started |
 | Contact   | Not started |

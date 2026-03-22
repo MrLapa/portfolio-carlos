@@ -8,7 +8,7 @@
   },
   "about": {
     "title": "About Me",
-    "background": "I'm a Software Engineer with 9 years of experience building high-quality web applications, specializing in React, TypeScript, and front-end technologies. I thrive in agile teams, write clean, maintainable code, and focus on crafting smooth, user-friendly experiences. I also leverage AI tools like ChatGPT and GitHub Copilot to boost productivity and explore creative solutions.",
+    "background": "AI-Driven Senior Software Engineer with 9+ years of experience building and scaling modern web applications, specializing in React, Next.js, and TypeScript. I leverage AI-assisted development and autonomous agents to accelerate delivery, improve code quality, and support architectural decisions. Beyond manual implementation, I orchestrate AI-driven workflows for task decomposition, code generation, and large-scale refactoring — while ensuring alignment with clean code principles and scalable architecture.",
     "experience": "Experience",
     "mail": "Mail Me",
     "resume": "Resume",
@@ -17,10 +17,10 @@
     "experiences": [
       {
         "company": "Wizeline SAS",
-        "position": "Software Engineer",
+        "position": "Senior Software Engineer (Frontend / AI-Driven)",
         "startDate": "2023",
-        "endDate": "Presente",
-        "description": "Building performant UIs with MUI and Next.js. Writing unit tests with Jest and React Testing Library. Using TanStack Query and GraphQL for efficient data handling.",
+        "endDate": "Present",
+        "description": "Leveraging AI-assisted and agentic workflows (GitHub Copilot, VSCode agents) to accelerate delivery. Designing scalable frontend components with TypeScript, MUI, and Tailwind CSS. Optimizing performance (SSR/SSG) and data-fetching with Next.js 13+, GraphQL, and TanStack Query.",
         "location": "Colombia"
       },
       {

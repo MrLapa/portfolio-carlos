@@ -16,6 +16,11 @@ const skills = [
   { name: "TypeScript", value: 90, icon: "/assets/img/stack-icons/ts.svg" },
   { name: "Next.js", value: 90, icon: "/assets/img/stack-icons/nextjs.svg" },
   {
+    name: "AI-Assisted Development (Copilot, Cursor, ChatGPT)",
+    value: 95,
+    icon: "/assets/img/stack-icons/copilot.png",
+  },
+  {
     name: "TanStack Query",
     value: 80,
     icon: "/assets/img/stack-icons/tanstack.png",
@@ -40,11 +45,6 @@ const skills = [
     name: "Version Control (Git, GitHub)",
     value: 90,
     icon: "/assets/img/stack-icons/github.svg",
-  },
-  {
-    name: "AI Tools (Copilot, Chat GPT)",
-    value: 90,
-    icon: "/assets/img/stack-icons/copilot.png",
   },
 ]
 
@@ -127,7 +127,7 @@ const About = () => {
                       <div className="a-text">
                         <a
                           className="text-reset stretched-link"
-                          href="/docs/carlos-garcia-frontend-resume-2025.pdf"
+                          href="/docs/carlos-garcia-frontend-resume.pdf"
                           target="_blank"
                         >
                           {t("about.resume")}
