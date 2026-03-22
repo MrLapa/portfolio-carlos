@@ -7,12 +7,12 @@ type Service = {
 }
 
 const serviceIcons: Record<string, string> = {
+  ai: "bi bi-robot",
   frontend: "bi bi-code-slash",
   performance: "bi bi-gear",
   testing: "bi bi-bug",
   components: "bi bi-layers",
   api: "bi bi-diagram-3",
-  agile: "bi bi-people-fill",
 }
 
 const Services = () => {

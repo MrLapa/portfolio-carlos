@@ -53,6 +53,11 @@
     "title": "My Services",
     "items": [
       {
+        "key": "ai",
+        "title": "AI-Assisted Development & Agentic Workflows",
+        "description": "Accelerating delivery through AI-driven workflows using GitHub Copilot, Cursor, and autonomous agents for task decomposition, code generation, and large-scale refactoring."
+      },
+      {
         "key": "frontend",
         "title": "Front-End Development",
         "description": "Modern, responsive, and maintainable interfaces built with React, TypeScript, and Next.js. I craft smooth user experiences using component-based architecture and best practices."
@@ -76,11 +81,6 @@
         "key": "api",
         "title": "API Integration",
         "description": "Efficient data fetching and state management using TanStack Query (React Query), Apollo Client, and integration with GraphQL and REST APIs."
-      },
-      {
-        "key": "agile",
-        "title": "Agile Development & Collaboration",
-        "description": "Experience working in agile teams with strong communication, rapid iteration, and focus on delivering high-quality features on time."
       }
     ]
   },

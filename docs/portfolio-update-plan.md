@@ -46,9 +46,14 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 
 **Files:** `src/screens/Services/index.tsx` (hardcoded serviceIcons), `en.json`, `es.json`
 
-- [ ] Add new service: "AI-Assisted Development & Agentic Workflows"
-- [ ] Add matching icon in `serviceIcons` map
-- [ ] Consider replacing or reworking "Agile" card to make room, or keep all 7
+### 3A. Replace Agile card with AI card + reorder
+- [x] Remove "Agile Development & Collaboration" service from `en.json` + `es.json`
+- [x] Add "AI-Assisted Development & Agentic Workflows" as first service in `en.json` + `es.json`
+- [x] Reorder: AI → Frontend → Performance → Testing → Components → API
+
+### 3B. Update serviceIcons
+- [x] Remove `agile` icon mapping from `Services/index.tsx`
+- [x] Add `ai` icon mapping (`bi bi-robot`) in `Services/index.tsx`
 
 ---
 
@@ -83,7 +88,7 @@ Update all sections and locale files (en.json + es.json) to reflect the shift to
 | --------- | ----------- |
 | Welcome   | Done        |
 | About     | Done        |
-| Services  | Not started |
+| Services  | Done        |
 | Portfolio | Not started |
 | Contact   | Not started |
 | Metadata  | Not started |

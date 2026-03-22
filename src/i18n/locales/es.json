@@ -53,6 +53,11 @@
     "title": "Mis Servicios",
     "items": [
       {
+        "key": "ai",
+        "title": "Desarrollo asistido por IA y flujos agénticos",
+        "description": "Acelerando entregas mediante flujos de trabajo impulsados por IA con GitHub Copilot, Cursor y agentes autónomos para descomposición de tareas, generación de código y refactorización a gran escala."
+      },
+      {
         "key": "frontend",
         "title": "Desarrollo Frontend",
         "description": "Interfaces modernas, adaptables y fáciles de mantener creadas con React, TypeScript y Next.js. Diseñamos experiencias de usuario fluidas utilizando arquitectura basada en componentes y buenas prácticas."
@@ -76,11 +81,6 @@
         "key": "api",
         "title": "Integración API",
         "description": "Obtención eficiente de datos y gestión del estado utilizando TanStack Query (React Query), Apollo Client, e integración con GraphQL y REST APIs."
-      },
-      {
-        "key": "agile",
-        "title": "Desarrollo ágil y colaboración",
-        "description": "Experiencia de trabajo en equipos ágiles con sólida comunicación, iteración rápida y enfoque en la entrega de soluciones de alta calidad a tiempo."
       }
     ]
   },
